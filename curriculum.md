@@ -22,13 +22,15 @@ kanban-plugin: board
 
 ## Lecture 2
 
-- [ ] #lecture Why library is the core of the whole system. Library as lowest level interface
+- [ ] #homework Read loongreads about GitHub flow (lecture 1). And read loongread about testing on Python (preparing for lecture 2)
 - [ ] #lecture Learning how to work with the uv package manager
+- [ ] #lecture Why library is the core of the whole system. Library as lowest level interface
 - [ ] #lecture Review of `lib` repository structure and library design
 - [ ] #live-demo - Adding first metric end-to-end (API → logic → test)
 - [ ] #practice Students at pairs try to solve issue and sent pull request
 	(*I’m reject it because this haven’t tests and we start to talk about testing*)
 - [ ] #lecture Why testing is best way for up and hold code quality. The correct perception of testing: not privilege, base minimum. The image of protective wall.
+- [ ] #note Use learngowithtests course for preparing materials about testing
 - [ ] #lecture How to write tests on Python? Test Driven Development
 - [ ] #practice Students adding tests to their pull requests. (*They can swap code writer in pair*)
 - [ ] #note Announcement of next lecture
@@ -103,13 +105,14 @@ kanban-plugin: board
 - [ ] #note Create `CONTRIBUTING.md` guide
 - [ ] #note Write blog post about our project and share it on Habr, Medium, Devto
 - [ ] #idea At final steps make repositories vary comfartbale for new contribution and after that invite CU students and not only to this project
-- [ ] #idea Invite external reviewer (not teacher) to leave harsh feedback on repo
 - [ ] #idea collect GitHub data and make a study
+- [ ] #idea Invite external reviewer (not teacher) to leave harsh feedback on repo
 - [ ] #idea Make GitHub Discussions enabled and seed first questions
 - [ ] #idea Highlight some issues and doesn’t close it, that will for new contributors. Tag some issues as `good first issue` and `help wanted`
 - [ ] #idea Do a public call for feedback on Reddit / Telegram / Discord
 - [ ] #idea Add badges that actually mean something (coverage, release cadence)
 - [ ] #idea Connect AI for analyze PRs or user profile
+- [ ] #note A few words about puzzle driven development
 
 
 
