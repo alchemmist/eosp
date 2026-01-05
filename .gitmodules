@@ -1,3 +1,9 @@
 [submodule "lib-demo"]
 	path = lib-demo
 	url = git@github-sub:flamelen/lib-demo.git
+[submodule "bot-demo"]
+	path = bot-demo
+	url = git@github-sub:flamelen/bot-demo.git
+[submodule "cli-demo"]
+	path = cli-demo
+	url = git@github-sub:flamelen/cli-demo.git
