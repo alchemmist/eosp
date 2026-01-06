@@ -5,3 +5,6 @@ sync:
 
 spell:
 	-cspell-cli "**/*.{md,tex}"
+
+lint:
+	markdownlint-cli2 . --fix

@@ -1,4 +1,5 @@
 ---
+
 theme: ./theme
 fonts:
   sans: "CMU-Roman"
@@ -8,7 +9,6 @@ fonts:
 title: Introduction to course.
 info: |
   The first lecture of course "Engineering Open Source Projects".
-
   Created by Anton Grishin as part of the CPM and CU 2026 educational project.
 drawings:
   persist: false
@@ -16,7 +16,6 @@ transition: slide-left
 mdc: true
 duration: 35min
 date: February 18th, 2026
-
 layout: intro
 ---
 
@@ -63,4 +62,3 @@ Getting to know your Robertus Hagrid and who you are
   year="June 2021"
   avatar="./assets/paul-graham.png"
 />
-
