@@ -1,13 +1,16 @@
+import:
+  - "@cspell/dict-ru_ru/cspell-ext.json"
+language: en, en-US, ru, ru-ru
 $schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json
-version: '0.2'
+version: "0.2"
 dictionaryDefinitions:
   - name: project-words
-    path: './project-words.txt'
+    path: "./project-words.txt"
     addWords: true
 dictionaries:
   - project-words
 ignorePaths:
-  - 'node_modules'
-  - 'venv'
-  - '.venv'
-  - '/project-words.txt'
+  - "node_modules"
+  - "venv"
+  - ".venv"
+  - "/project-words.txt"

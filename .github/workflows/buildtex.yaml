@@ -1,0 +1,29 @@
+name: buildtex
+
+on:
+  push:
+    paths:
+      - "syllabus/**.tex"
+  pull_request:
+    paths:
+      - "syllabus/**.tex"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@latest
+
+      - name: Setup TeX Live
+        uses: dante-ev/texlive-action@latest
+        with:
+          texlive_version: "2025"
+
+      - name: Build LaTeX PDFs
+        run: |
+          cd syllabus
+          for f in *.tex; do
+            pdflatex -interaction=nonstopmode -output-directory=./ "$$f"
+          done

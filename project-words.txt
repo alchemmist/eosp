@@ -23,3 +23,7 @@ aiogram
 telebot
 Colab
 hackathons
+рефакторинга
+деплоя
+деплоем
+деплоя
