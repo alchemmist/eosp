@@ -1,0 +1,160 @@
+\documentclass[11pt]{article}
+
+\usepackage[T2A]{fontenc}        % кириллица
+\usepackage[utf8]{inputenc}      % UTF-8
+\usepackage[russian,english]{babel} % локализация
+\usepackage{lmodern}             % Latin Modern (CMR расширенный,
+\usepackage{cmap}
+% включает кириллицу)
+\renewcommand{\rmdefault}{cmr}   % основной шрифт
+\renewcommand{\ttdefault}{cmtt}  % моноширинный
+
+\usepackage{textcomp}
+
+\usepackage[left=3.5cm, right=3.5cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[htt]{hyphenat}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+\usepackage{titlesec}
+
+\definecolor{accent}{HTML}{4C8047}
+
+\newcommand{\hlsection}[1]{%
+  \par\addvspace{10pt}%
+  \noindent
+  \colorbox{accent}{%
+    \ttfamily\bfseries\color{white}%
+    \strut#1%
+  }%
+  \par\addvspace{6pt}%
+}
+
+\usepackage{setspace}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\setstretch{0.95}
+
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{1em}{0.5em}
+
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{hyperref}
+
+\definecolor{linkgray}{RGB}{50,50,50}
+
+\newcommand{\myhref}[2]{%
+  \href{#1}{\textcolor{linkgray}{\underline{#2}}}%
+}
+
+\usepackage[htt]{hyphenat}       % переносы в typewriter (\texttt)
+\hyphenation{до-ку-мен-ти-ро-ван-ных}
+\hyphenation{го-то-вы-е}
+\hyphenation{под-держ-ки}
+\hyphenation{под-держ-ки}
+\hyphenation{про-цесс}
+
+\begin{document}
+
+\section*{\texttt{Разработка Open Source проектов (EOSP)}}
+
+\hspace{1cm}
+
+\texttt{Серия лекций и семинаров от Антона Гришина\\
+  Для старшеклассников из
+  \myhref{https://xn--l1afu.xn--p1ai/}{ЦПМ} на кампусе
+  \myhref{https://cu.ru}{Центрального университета}.\\
+  Все материалы курса доступны в репозитории
+  \myhref{https://github.com/alchemmist/eosp}{alchemmist/eosp} на GitHub.
+}
+
+\hlsection{Аннотация}
+\textit{Проект создаёт систему для оценки вклада разработчиков на основе
+  активности в GitHub, реализованную как Python-библиотека, CLI и
+  Telegram-бот. Студенты изучают модульное проектирование, тестирование,
+  CI/CD, документацию и реальные практики Open Source, с акцентом на
+удобство использования и чистую, расширяемую архитектуру.}
+
+\hlsection{Цель проекта}
+Цель проекта — создать практическую систему для оценки вклада
+разработчиков или команд на основе активности в GitHub. Система
+включает Python-библиотеку для расчёта метрик, CLI для взаимодействия
+с библиотекой и Telegram-бота для удобного доступа.
+
+\hlsection{Преподаватель}
+\begin{minipage}{0.75\textwidth}
+  Антон — практикующий разработчик и преподаватель Python с более чем
+  четырьмя годами опыта, участвующий в десятках репозиториев.
+  Финалист Чемпионата России по спортивному программированию и
+  победитель конференции \guillemotleft{Наука для жизни}\guillemotright.
+  Автор блога:
+  \myhref{https://alchemmist.xyz}{\footnotesize\texttt{alchemmist.xyz}}.
+  Подробнее в \myhref{https://alchemmist.xyz/cv/ru/short}{резюме}.
+\end{minipage}
+\hspace{0.03\textwidth}
+\begin{minipage}{0.2\textwidth}
+  \includegraphics[width=6em]{anton.jpg}
+\end{minipage}
+
+\hlsection{Почему этот курс?}
+HR-процессы и управление IT становятся всё сложнее, и оценивать
+разработчиков по продуктивности, качеству кода, навыкам и вкладу
+без чётких метрик крайне сложно. Этот курс обучает студентов
+реальным практикам Open Source, предоставляя практический опыт
+в проектировании модульных, поддерживаемых и хорошо документированных систем.
+
+\hlsection{Методология}
+Курс ориентирован на практику. С самой первой лекции студенты
+получают конкретное задание: спроектировать и создать реальный проект.
+Все последующие лекции и материалы строятся таким образом, чтобы
+постепенно добавлять знания и инструменты для завершения и
+улучшения проекта.
+
+\hlsection{Результаты обучения}
+К концу курса студенты будут знать:
+\begin{itemize}[topsep=0pt, partopsep=0pt, itemsep=2pt, parsep=0pt]
+  \item Как на практике проходит разработка в Open Source
+    (GitHub Flow, issue, pull request, code review).
+  \item Как проектировать архитектуру программ с чётким разделением
+    обязанностей (\texttt{lib} $\rightarrow$ \texttt{cli}
+    $\rightarrow$ \texttt{bot}).
+  \item Как писать полезные тесты и использовать тестирование как
+    основу качества кода и рефакторинга.
+  \item Как строить и поддерживать \texttt{CI} и \texttt{CD} для
+    тестирования, релизов и деплоя.
+  \item Как создавать и публиковать библиотеки, CLI-инструменты и
+    сервисы, готовые к использованию.
+  \item Как правильно документировать проекты (\texttt{README}, wiki,
+    лицензии) для поддержки участников и пользователей.
+  \item Как работать с секретами, автоматизацией и деплоем в
+    средах, приближённых к производственным.
+  \item Как презентовать, защищать и публично демонстрировать
+    Open Source-проект.
+\end{itemize}
+
+\hlsection{План курса}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{l p{12cm}}
+  \texttt{Неделя 1:} & Обзор курса, основы Open Source, идея проекта
+  и рабочий процесс GitHub \\
+  \texttt{Неделя 2:} & Проектирование библиотеки, тестирование и TDD
+  на Python \\
+  \texttt{Неделя 3:} & \texttt{CI/CD}, релизы, лицензии и введение в
+  CLI-инструменты \\
+  \texttt{Неделя 4:} & Разработка CLI, документация, лицензии и
+  структура репозитория \\
+  \texttt{Неделя 5:} & Написание эффективных README и улучшение
+  документации проекта \\
+  \texttt{Неделя 6:} & Основы деплоя, базовый Docker и автоматизация
+  процессов \\
+  \texttt{Неделя 7:} & Подготовка презентаций, слайдов и демонстрация проекта \\
+  \texttt{Неделя 8:} & Финальные презентации, ретроспектива проекта и
+  планы на будущее \\
+\end{tabular}
+\renewcommand{\arraystretch}{1.0}
+
+\end{document}
