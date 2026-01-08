@@ -10,17 +10,19 @@ jobs:
       - uses: actions/checkout@v5
         with:
           persist-credentials: false
+      - name: Install cspell Russian dictionary
+        run: npm install @cspell/dict-ru_ru
       - uses: streetsidesoftware/cspell-action@v8
         with:
-          files: '**/*.{md,tex}'
+          files: "**/*.{md,tex}"
           check_dot_files: explicit
-          root: '.'
+          root: "."
           inline: warning
           treat_flagged_words_as_errors: false
           suggestions: true
           strict: true
           incremental_files_only: false
-          config: 'cspell.config.yaml'
+          config: "cspell.config.yaml"
           verbose: false
           use_cspell_files: false
           report: all
