@@ -31,8 +31,7 @@ html:not(.dark) {
 html.dark {
   --prism-foreground: #d4cfbf;
   --prism-comment: #758575;
-  --prism-string: #d48372;
-  --prism-literal: #429988;
+  --prism-string: #d48372; --prism-literal: #429988;
   --prism-keyword: #4d9375;
   --prism-boolean: #1c6b48;
   --prism-number: #6394bf;

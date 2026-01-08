@@ -13,6 +13,7 @@ globs:
 ignores:
   - "slides/theme/example.md"
   - "curriculum.md"
+  - "slides/**/*.md"
 noBanner: false
 noInlineConfig: true
 noProgress: false

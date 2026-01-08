@@ -1,5 +1,4 @@
 ---
-
 theme: ./theme
 fonts:
   sans: "CMU-Roman"
@@ -28,31 +27,44 @@ layout: intro
 Introduction to the EOSP course.
 
 <div class="abs-br m-6 text-xl"> 
-  <a href="https://github.com/alchemmist/eosp-course-2026" target="_blank" class="slidev-icon-btn">
+  <a href="https://github.com/alchemmist/eosp" target="_blank" class="slidev-icon-btn">
     <carbon:logo-github />
   </a>
 </div>
 
 ---
+layout: center
+---
 
 # Let's get acquainted
 
-Getting to know your Robertus Hagrid and who you are
+What do you think false here?
 
 <ul>
   <li v-click>I'm Anton. Study at 2nd course of SWE at Central University.</li>
-  <li v-click><a href="https://github.com/alchemmist">Programming</a> for 5 years. I have been involved in the development of 70+ repositories and have sent ~1600 commits.</li>
-  <li v-click>I'm graduate of Yandex Lyceum.</li>
+  <li v-click><a href="https://github.com/alchemmist">Involved</a> in the development of 70+ repositories and have sent <span style="font-family: monospace">~</span>1600 commits.</li>
+  <li v-click>I'm graduate of Yandex Lyceum golden certificate.</li>
   <li v-click>I used Linux as main operation system for last 3 years.</li>
-  <li v-click><span v-mark.strike-through.red="9">I'm teaching programming for 4 years and have trained more than 30 people.</span></li>
+  <li v-click><span v-mark.strike-through.red="9">I can type 120 words per minute on qwerty keyboard.</span></li>
   <li v-click>I used to be a professional volleyball player.</li>
   <li v-click>I am using only terminal for developing.</li>
   <li v-click>Author of blog: <a class="mono-text" href="https://alchemmist.xyz?utm_source=slides">alchemmist.xyz</a></li>
 </ul>
 
 ---
+layout: center
+---
 
-# Motivation
+# Open Source <ri-open-source-fill />
+
+Source code of project is open to see for everyone.
+
+Open to copy? Open to appropriate? Open to sell?
+
+
+---
+layout: center
+---
 
 <Quote
   text="It's a bit sad to think of all the high school kids turning their backs on building treehouses and sitting in class dutifully learning about Darwin or Newton to pass some exam, when the work that made Darwin and Newton famous was actually closer in spirit to building treehouses than studying for exams."

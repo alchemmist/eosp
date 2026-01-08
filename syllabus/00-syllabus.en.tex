@@ -1,0 +1,146 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\usepackage[left=3.5cm, right=3.5cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[htt]{hyphenat}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+\usepackage{titlesec}
+
+\definecolor{accent}{HTML}{4C8047}
+
+\newcommand{\hlsection}[1]{%
+  \par\addvspace{10pt}%
+  \noindent
+  \colorbox{accent}{%
+    \ttfamily\bfseries\color{white}%
+    \strut#1%
+  }%
+  \par\addvspace{6pt}%
+}
+
+\usepackage{setspace}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\setstretch{0.95}
+
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{1em}{0.5em}
+
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{hyperref}
+
+\definecolor{linkgray}{RGB}{50,50,50}
+
+\newcommand{\myhref}[2]{%
+  \href{#1}{\textcolor{linkgray}{\underline{#2}}}%
+}
+
+\begin{document}
+
+\section*{\texttt{Engineering Open Source Projects (EOSP)}}
+
+\hspace{1cm}
+
+\texttt{Series of lectures and seminars by Anton Grishin\\
+  To be presented to high school students from
+  \myhref{https://xn--l1afu.xn--p1ai/}{CPM} in
+  \myhref{https://cu.ru}{CU} campus.\\
+  The all course materials in the
+  \myhref{https://github.com/alchemmist/eosp}{alchemmist/eosp} GitHub
+  repository.
+}
+
+\hlsection{Abstract}
+\textit{This project builds a system to evaluate developer contributions based
+  on GitHub activity, implemented as a Python library, a CLI, and a
+  Telegram bot. Students practice modular design, testing, CI/CD,
+  documentation, and real-world Open Source workflows, focusing on
+usability and clean, extensible solutions.}
+
+\hlsection{What is the goal?}
+The goal of this project is to build a practical system for assessing
+developer or team contributions based on GitHub activity. The system
+includes a Python library to calculate contribution metrics, a CLI
+for interacting with the library, and a Telegram bot for convenient access.
+
+\hlsection{Who is the teacher?}
+\begin{minipage}{0.75\textwidth}
+  Anton is a hands-on software developer and Python
+  instructor with over four years of experience, contributing to
+  dozens of repositories. Anton is a finalist of the Russian
+  Championship in Competitive Programming. And winner of
+  the \guillemotleft{Science for Life}\guillemotright\ conference.
+  Author of blog:
+  \myhref{https://alchemmist.xyz}{\footnotesize\texttt{alchemmist.xyz}}.
+
+\end{minipage}
+\hspace{0.03\textwidth}
+\begin{minipage}{0.2\textwidth}
+  \includegraphics[width=6em]{anton.jpg}
+\end{minipage}
+
+\hlsection{Why this course?}
+HR processes and IT management are increasingly complex, making it
+difficult to evaluate developers across productivity, code quality,
+skills, and contributions without clear metrics. This course teaches
+students real-world Open Source practices while providing hands-on
+experience in designing modular, maintainable, and well-documented systems.
+
+\hlsection{What's the methodology?}
+The course is practice-driven. From the very first lecture, students
+receive a concrete task: to design and build a real project. All
+subsequent lectures, materials, and activities are structured to
+support this goal, gradually adding the knowledge and tools needed to
+complete and refine the project.
+
+\hlsection{Learning Outcomes}
+By the end of the course, students will know:
+\begin{itemize}[topsep=0pt, partopsep=0pt, itemsep=2pt, parsep=0pt]
+  \item How the Open Source development process works in practice
+    (GitHub Flow, issues, pull requests, reviews).
+  \item How to design software systems with clear architecture and
+    separation of concerns (\texttt{lib} $\rightarrow$ \texttt{cli}
+    $\rightarrow$ \texttt{bot}).
+  \item How to write meaningful tests and use testing as a foundation
+    for code quality and refactoring.
+  \item How to build and maintain \texttt{CI} and \texttt{CD}
+    pipelines for testing, releases, and deployments.
+  \item How to develop and publish libraries, CLI tools, and services
+    ready for real users.
+  \item How to document projects properly (\texttt{README}, wiki,
+    licenses) to support contributors and users.
+  \item How to work with secrets, automation, and deployment in
+    production-like environments.
+  \item How to present, pitch, and publicly share an Open Source project.
+\end{itemize}
+
+\hlsection{Schedule}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{ll}
+  \texttt{Week 1:} & Course overview, Open Source fundamentals, project idea
+  and GitHub workflow \\
+  \texttt{Week 2:} & Library-first design, testing mindset, and Test Driven
+  Development in Python \\
+  \texttt{Week 3:} & CI/CD pipelines, releases, licensing, and introduction to
+  CLI tools \\
+  \texttt{Week 4:} & CLI development, documentation, licensing decisions, and
+  repository structure \\
+  \texttt{Week 5:} & Writing effective READMEs and improving project
+  documentation \\
+  \texttt{Week 6:} & Deployment fundamentals, Docker basics, and
+  production automation \\
+  \texttt{Week 7:} & Pitch preparation, slide decks, and project presentation \\
+  \texttt{Week 8:} & Final presentations, project retrospective, and
+  future directions \\
+\end{tabular}
+\renewcommand{\arraystretch}{1.0}
+
+\end{document}

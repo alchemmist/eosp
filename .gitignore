@@ -13,3 +13,20 @@ wheels/
 # Virtual environments
 .venv
 venv
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.blg
+*.bbl
+*.run.xml

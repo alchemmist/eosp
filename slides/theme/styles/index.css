@@ -19,6 +19,10 @@
     url("/assets/fonts/couriercyr.ttf") format("truetype");
 }
 
+:root {
+  font-size: 14px;
+}
+
 .slidev-note :not(pre) > code,
 .slidev-layout :not(pre) > code {
   padding: 0.3rem 0 !important;
