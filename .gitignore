@@ -30,3 +30,4 @@ venv
 *.blg
 *.bbl
 *.run.xml
+syllabus/*.pdf

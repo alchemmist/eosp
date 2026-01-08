@@ -2,11 +2,7 @@ name: buildtex
 
 on:
   push:
-    paths:
-      - "syllabus/**.tex"
   pull_request:
-    paths:
-      - "syllabus/**.tex"
 
 jobs:
   build:
@@ -14,16 +10,18 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@latest
-
-      - name: Setup TeX Live
-        uses: dante-ev/texlive-action@latest
-        with:
-          texlive_version: "2025"
-
-      - name: Build LaTeX PDFs
+        uses: actions/checkout@v5
+      - name: Install LaTeX, Russian, FontAwesome
         run: |
-          cd syllabus
-          for f in *.tex; do
-            pdflatex -interaction=nonstopmode -output-directory=./ "$$f"
-          done
+          sudo apt-get update
+          sudo apt-get install -y \
+            latexmk \
+            texlive-latex-base \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-lang-cyrillic \
+            texlive-fonts-extra
+      - name: Build PDF
+        run: |
+          cd syllabus && \
+          latexmk -pdf -f ./*.tex
