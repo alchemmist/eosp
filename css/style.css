@@ -21,6 +21,8 @@ h1 {
 
 .kanban-item {
   line-height: 2;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .kanban-board {
