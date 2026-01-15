@@ -10,11 +10,10 @@ kanban-plugin: board
 - [ ] #lecture What is OpenSource and why it important? Show examples of huge and popular projects and archived repositories
 - [ ] #lecture The idea and goal of our project. Architecture recap: `lib` → `cli` → `bot`
 - [ ] #lecture Motivation and mindset on course
-- [ ] #live-demo Creating organization and repository on GitHub
-- [ ] #lecture Introduction to GitHub API. Limitations
-- [ ] #live-demo Show the difference ways for working with GitHub API: `gh cli`, `curl`, `browser`, `requests`
-- [ ] #lecture How developing process in OpenSource looks like (GitHub Flow)
 - [ ] #practice Come up with project name
+- [ ] #live-demo Creating organization and repository on GitHub
+- [ ] #lecture Introduction to GitHub API. Limitations. Show the difference ways for working with GitHub API: `gh cli`, `curl`, `browser`, `requests`
+- [ ] #lecture How developing process in OpenSource looks like (GitHub Flow)
 - [ ] #note How to productive working on course?
 - [ ] #note Expectations: what is considered “done” on this course
 - [ ] #note Announcement of next lecture
@@ -41,6 +40,7 @@ kanban-plugin: board
 - [ ] #homework Open at least one issue describing improvements, bugs or refactor
 - [ ] #homework Install the necessary tools and dependencies. Up the project locally
 - [ ] #lecture What is CI/CD and why it’s important for code quality
+- [ ] #note Show excerpt from the movie “home alone” like example of automated defense system
 - [ ] #live-demo Setup and trying CI/CD in `lib`
 - [ ] #live-demo How we build a new release of `lib` and publish it manually
 - [ ] #lecture How to make auto-deploy release of `lib`
@@ -103,9 +103,14 @@ kanban-plugin: board
 ## Additionally
 
 - [ ] #lecture `Makefile` as entry point into repository and foundation of repository automation
+- [ ] #lecture Introduction to Asynchronous Programming in Python
 - [ ] #note Create `CONTRIBUTING.md` guide
+- [ ] #note Create `CODE_OF_CONDACT.md` guide
 - [ ] #note Write blog post about our project and share it on Habr, Medium, Devto
+- [ ] #note How to make a releases and versioning you product: https://semver.org/
 - [ ] #note Use for PR: https://github.com/decentralizedlabs/pr-codex
+	
+	Or this: https://docs.github.com/en/copilot/how-tos/use-copilot-agents/request-a-code-review/use-code-review
 - [ ] #note Use for PR:
 	https://about.codecov.io/
 - [ ] #note A few words about puzzle driven development
