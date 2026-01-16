@@ -1,41 +1,23 @@
-<!--
-  Usage:
-```md
----
-layout: two-cols-header
----
-This spans both
-::left::
-# Left
-This shows on the left
-::right::
-# Right
-This shows on the right
-::bottom::
-This shows at the bottom, aligned to the end (bottom) of the grid
-
-<style>
-.two-cols-header {
-  column-gap: 20px; /* Adjust the gap size as needed */
-}
-</style>
-```
--->
-
 <script setup lang="ts">
+import { useAttrs, computed } from 'vue'
+import Footer from "../components/Footer.vue";
+
 const props = defineProps({
-  class: {
-    type: String,
-  },
-  layoutClass: {
-    type: String,
-  },
+  class: String,
+  layoutClass: String,
 });
-import Footer from '../components/Footer.vue'
+
+const attrs = useAttrs();
+
+const gap = computed(() => attrs.gap ?? "20px");
 </script>
 
 <template>
-  <div class="slidev-layout two-cols-header w-full h-full" :class="layoutClass">
+  <div
+    class="slidev-layout two-cols-header w-full h-full"
+    :class="layoutClass"
+    :style="{ columnGap: gap }"
+  >
     <div class="col-header">
       <slot />
     </div>
@@ -71,9 +53,5 @@ import Footer from '../components/Footer.vue'
 .col-bottom {
   align-self: end;
   grid-area: 3 / 1 / 3 / 3;
-}
-
-.two-cols-header {
-  column-gap: 20px;
 }
 </style>

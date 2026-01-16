@@ -548,23 +548,123 @@ Understanding these limits is essential when building scalable, reliable systems
 </ul>
 
 ---
+layout: two-cols-header
+gap: 60px
+---
+
+# Developing flows <MarkerX color="#FF7F50" title="github-flow" />
+
+Two ways of coding.
+
+::left::
+
+<div v-click>
+
+## Git Flow
+
+A structured and process-heavy branching model designed for scheduled releases. It relies on long-lived branches and explicit release management, which makes it predictable but slower to adapt.
+
+</div>
+
+<div style="width: 300px" v-click>
+
+```mermaid
+gitGraph
+%%{
+  init: {
+    "themeVariables": {
+      "git0": "#FF7F50",
+      "git1": "#FF9F7A",
+      "git2": "#FFC4A8",
+      "git3": "#EFA18A",
+      "git4": "#FFD6C9"
+    }
+  }
+}%%
+  commit
+  branch develop
+  checkout develop
+  commit
+
+  branch feature
+  checkout feature
+  commit
+  checkout develop
+  merge feature
+
+  branch release
+  checkout release
+  commit
+  checkout main
+  merge release
+
+  checkout develop
+  merge main
+
+  branch hotfix
+  checkout hotfix
+  commit
+  checkout main
+  merge hotfix
+```
+
+</div>
+
+::right::
+
+<div v-click>
+
+## GitHub Flow
+
+A lightweight workflow optimized for continuous delivery and open source. The `main` branch is always deployable, and all changes flow through pull requests.
+
+</div>
+
+<div style="width: 340px" v-click >
+
+```mermaid
+gitGraph
+%%{
+  init: {
+    "themeVariables": {
+      "git0": "#FF7F50",
+      "git1": "#FFD6C9",
+      "git2": "#FFD6C9"
+    }
+  }
+}%%
+    commit
+    commit
+    branch feature-login
+    checkout feature-login
+    commit
+    commit
+    checkout main
+    merge feature-login
+    commit
+    branch feature-api
+    checkout feature-api
+    commit
+    commit
+    commit
+    checkout main
+    merge feature-api
+    commit
+```
+
+</div>
+
+<style>
+.two-cols-header {
+  column-gap: 10cm !important;
+}
+</style>
+
+---
 layout: center
 ---
 
-# Git vs GitHub Flow <MarkerX color="#FF7F50" title="github-flow" />
-
-<ul>
-<li v-click>Git: a version control system, local, focused on branching and commits</li>
-<li v-click>GitHub: an online platform for Git with social and collaboration tools</li>
-<li v-click>GitHub Flow: a lightweight workflow that allows fast development and integration via pull requests</li>
-<li v-click>Main goal: a safe, transparent, and repeatable development process within a team</li>
-</ul>
-
----
-layout: center
----
-
-# Why GitHub Flow?
+# Why GitHub Flow?<MarkerX color="#FF7F50" title="github-flow" />
 
 <ul>
 <li v-click>All changes go through <b>pull requests</b> → code review, CI/CD checks</li>
@@ -578,59 +678,96 @@ layout: center
 layout: center
 ---
 
-# Key Entities in GitHub Flow
+# Key Entities in GitHub Flow<MarkerX color="#FF7F50" title="github-flow" />
 
-<ul>
-<li v-click><b>Issue</b> – describes a bug, feature, task, or question; starting point for development</li>
-<li v-click><b>Branch</b> – isolated workspace for a specific feature or fix</li>
-<li v-click><b>Commit</b> – individual changes tracked in Git history</li>
-<li v-click><b>Pull Request (PR)</b> – proposes changes from a branch into <code>main</code>; facilitates review and discussion</li>
-<li v-click><b>Code Review</b> – teammates review PRs to ensure quality and maintainability</li>
-<li v-click><b>CI/CD checks</b> – automated tests, linting, build, and deployment pipelines</li>
-<li v-click><b>Merge</b> – approved PR is merged into <code>main</code>, usually triggers deployment</li>
-</ul>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr; gap: 1rem;">
+
+<Card v-click title="Issue" mono-head color="#FF7F50">
+Describes a bug, feature, task, or question. Starting point for development.
+</Card>
+
+<Card v-click title="Branch" mono-head color="#FF7F50">
+Isolated workspace for a specific feature or fix.
+</Card>
+
+<Card v-click title="Commit" mono-head color="#FF7F50">
+Individual changes tracked in Git history.
+</Card>
+
+<Card v-click title="Pull Request (PR)" mono-head color="#FF7F50">
+Proposes changes from a branch into main. Facilitates review and discussion.
+</Card>
+
+<Card v-click title="Code Review" mono-head color="#FF7F50">
+Teammates review PRs to ensure quality and maintainability.
+</Card>
+
+<Card v-click title="CI/CD Checks" mono-head color="#FF7F50">
+Automated tests, linting, build, and deployment pipelines.
+</Card>
+
+<Card v-click title="Merge" mono-head color="#FF7F50">
+Approved PR is merged into main and usually triggers deployment.
+</Card>
+
+</div>
 
 ---
-layout: image-right
-image: /assets/github-flow.png
-background-position: left
-shadow: true
+layout: two-cols
 ---
 
-# GitHub Flow in Action
+<style>
+.col-right {
+  display: flex;
+  flex-direction: row-reverse;
+}
+</style>
+
+# GitHub Flow in Action<MarkerX color="#FF7F50" title="github-flow" />
 
 Visual representation of the workflow:
 
-1. Create an <b>issue</b>
-2. Create a <b>branch</b> for the issue
-3. Commit changes locally and push to GitHub
-4. Open a <b>pull request</b> referencing the issue
-5. Conduct <b>code review</b> and CI/CD validation
-6. Merge into <b>main</b> after approval
-7. Deploy automatically (if CI/CD is configured)
+<ol>
+  <li v-click>Developer identifies a bug or feature → <b>creates an issue</b></li>
+  <li v-click>Creates a branch from <code>main</code> for the issue</li>
+  <li v-click>Makes <b>commits</b> locally and pushes to GitHub</li>
+  <li v-click>Opens a <b>pull request</b> linking to the issue</li>
+  <li v-click>Team conducts <b>code review</b> and automated **CI/CD checks**</li>
+  <li v-click>After approval, PR is merged into <code>main</code></li>
+  <li v-click>Deployment triggers automatically (if CI/CD is configured)</li>
+</ol>
+
+::right::
+
+<div v-click="1" style="width: 220px;">
+
+```mermaid
+%% Circular GitHub Flow
+flowchart TB
+    style BUG fill:#FFD1B1,stroke:#FF7F50,stroke-width:1px
+    style ISSUE fill:#FFB199,stroke:#FF7F50,stroke-width:1px
+    style DISCUSS fill:#FFCCAA,stroke:#FF7F50,stroke-width:1px
+    style PR fill:#FFB199,stroke:#FF7F50,stroke-width:1px
+    style CI fill:#FFCCAA,stroke:#FF7F50,stroke-width:1px
+    style REVIEW fill:#FFB199,stroke:#FF7F50,stroke-width:1px
+    style MERGE fill:#FFD1B1,stroke:#FF7F50,stroke-width:1px
+
+    BUG["Find a bug / Need feature"] --> ISSUE["Create Issue"]
+    ISSUE --> DISCUSS["Discussion / Planning"]
+    DISCUSS --> PR["Open Pull Request"]
+    PR --> CI["PR Checks with CI"]
+    CI --> REVIEW["Reviewer Reviews PR"]
+    REVIEW --> MERGE["Merge PR into main"]
+    MERGE --> BUG
+```
+
+</div>
 
 ---
 layout: center
 ---
 
-# Issue → Merge: Step by Step
-
-<ul>
-<li v-click><b>Step 1:</b> Issue is created describing bug, feature, or task</li>
-<li v-click><b>Step 2:</b> Developer creates a branch named after issue (e.g., <code>issue-42-fix-login</code>)</li>
-<li v-click><b>Step 3:</b> Commit small, meaningful changes to the branch</li>
-<li v-click><b>Step 4:</b> Push branch to GitHub and open a <b>pull request</b> linked to the issue</li>
-<li v-click><b>Step 5:</b> Team reviews code, CI/CD runs tests automatically</li>
-<li v-click><b>Step 6:</b> Address feedback, push updates to the PR</li>
-<li v-click><b>Step 7:</b> PR approved → merge into <code>main</code></li>
-<li v-click><b>Step 8:</b> <code>main</code> is deployable, issue closed, cycle completed</li>
-</ul>
-
----
-layout: center
----
-
-# Best Practices in GitHub Flow
+# Best Practices in GitHub Flow<MarkerX color="#FF7F50" title="github-flow" />
 
 <ul>
 <li v-click>Keep branches <b>short-lived</b> → frequent integration reduces conflicts</li>
