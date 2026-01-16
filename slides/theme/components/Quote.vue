@@ -39,6 +39,8 @@ const props = defineProps({
 });
 
 const avatarUrl = computed(() => {
+  console.log("===========");
+  console.log(import.meta.env.BASE_URL);
   if (!props.avatar) return "";
   return props.avatar.startsWith("/")
     ? import.meta.env.BASE_URL + props.avatar.slice(1)

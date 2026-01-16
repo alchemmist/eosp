@@ -1,0 +1,1 @@
+import{f as e,o as s,j as o}from"./modules/vue-BDkTMyHn.js";import{I as t}from"./index-BK-5tiNj.js";const a={class:"slidev-layout full w-full h-full"},n={__name:"full",setup(r){return t(),(l,u)=>(s(),e("div",a,[o(l.$slots,"default",{class:"w-full h-full"})]))}};export{n as _};
