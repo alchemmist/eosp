@@ -5,9 +5,9 @@
 
 There are all materials for my EOSP course, that was started at winter 2026 for high school students. Educational project created with [CPM](https://цпм.рф) and [CU](https://cu.ru) (Moscow, Russia).
 
-Read [syllabus](https://alchemmist.github.io/eosp/pdf/00-syllabus.en.pdf) for more information about course.
+Read [syllabus](https://alchemmist.github.io/eosp/pdf/00-syllabus.ru.pdf) for more information about course.
 
-Look (_and play_) the [curriculum](https://alchemmist.github.io/eosp/).
+Look (_and play_) the [curriculum](https://alchemmist.github.io/eosp/curriculum/).
 
 Build syllabus and slides with:
 
