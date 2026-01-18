@@ -15,7 +15,6 @@ const props = defineProps({
 const imgAspect = ref<number | null>(null);
 const resolvedSrc = resolveAssetUrl(props.src);
 
-// Получаем естественное соотношение сторон
 const loadImage = () => {
   const img = new Image();
   img.src = resolvedSrc;
