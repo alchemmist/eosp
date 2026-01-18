@@ -12,10 +12,11 @@ const props = defineProps({
   style: { type: Object as () => Record<string, string>, default: () => ({}) },
 });
 
-// resolvedSrc безопасно для dev и build
-const resolvedSrc = computed(() => new URL(props.src, import.meta.url).href);
+const resolvedSrc = computed(() => {
+  if (props.src.startsWith("/")) return props.src
+  return `/assets/${props.src}`
+})
 
-// natural aspect ratio
 const imgAspect = ref<number | null>(null);
 const loadImage = () => {
   const img = new Image();
@@ -26,7 +27,6 @@ const loadImage = () => {
 };
 loadImage();
 
-// style для div с background-image
 const backgroundStyle = computed(() => {
   const style: Record<string, string> = {
     ...handleBackground(resolvedSrc.value, props.dim, props.backgroundSize),
@@ -35,7 +35,7 @@ const backgroundStyle = computed(() => {
   };
 
   if (imgAspect.value) {
-    style.aspectRatio = `${1 / imgAspect.value}`; // width / height
+    style.aspectRatio = `${1 / imgAspect.value}`;
   }
 
   return style;
@@ -50,3 +50,4 @@ const backgroundStyle = computed(() => {
     :aria-label="alt"
   />
 </template>
+
