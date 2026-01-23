@@ -1,20 +1,13 @@
 ---
-theme: ./theme
+theme: alchemmist
 addons:
   - fancy-arrow
-fonts:
-  sans: "CMU-Roman"
-  serif: "CMU-Roman"
-  mono: "CMU-Typewriter"
-  provider: none
 title: Introduction to course.
 info: |
   The first lecture of course "Engineering Open Source Projects".
   Created by Anton Grishin as part of the CPM and CU 2026 educational project.
 drawings:
   persist: false
-transition: slide-left
-mdc: true
 favicon: "https://cdn.jsdelivr.net/gh/alchemmist/blog@main/site/static/favicon.ico"
 duration: 35min
 date: February 18th, 2026

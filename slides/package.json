@@ -14,7 +14,10 @@
     "@slidev/cli": "^52.11.0",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
+    "codemirror-theme-vars": "^0.1.2",
+    "prism-theme-vars": "^0.2.5",
     "slidev-addon-fancy-arrow": "^0.16.0",
+    "slidev-theme-alchemmist": "^0.1.0",
     "vue": "^3.5.25"
   },
   "devDependencies": {
