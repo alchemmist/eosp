@@ -17,7 +17,7 @@
     "codemirror-theme-vars": "^0.1.2",
     "prism-theme-vars": "^0.2.5",
     "slidev-addon-fancy-arrow": "^0.16.0",
-    "slidev-theme-alchemmist": "link:../../../.local/share/pnpm/global/5/node_modules/slidev-theme-alchemmist",
+    "slidev-theme-alchemmist": "^0.1.16",
     "vue": "^3.5.27"
   },
   "devDependencies": {

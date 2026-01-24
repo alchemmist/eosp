@@ -25,18 +25,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # ---------- LaTeX ----------
-      - name: Install LaTeX
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            latexmk \
-            texlive-latex-base \
-            texlive-latex-extra \
-            texlive-fonts-recommended \
-            texlive-fonts-extra \
-            texlive-lang-cyrillic
-
       # ---------- Node ----------
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -51,6 +39,18 @@ jobs:
         run: |
           cd slides
           yarn install --frozen-lockfile
+
+      # ---------- LaTeX ----------
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            latexmk \
+            texlive-latex-base \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            texlive-lang-cyrillic
 
       # ---------- Build ----------
       - name: Build site
