@@ -16,12 +16,9 @@ drawings:
 transition: slide-left
 mdc: true
 duration: 35min
-favicon: "https://cdn.jsdelivr.net/gh/alchemmist/blog@main/site/static/favicon.ico"
 date: 18 февраля 2026
 layout: intro
 themeConfig:
-  paginationX: r
-  paginationY: t
   paginationPagesDisabled: [1, 4, 5, 6, 7]
 ---
 

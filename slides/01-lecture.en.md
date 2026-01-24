@@ -8,7 +8,6 @@ info: |
   Created by Anton Grishin as part of the CPM and CU 2026 educational project.
 drawings:
   persist: false
-favicon: "https://cdn.jsdelivr.net/gh/alchemmist/blog@main/site/static/favicon.ico"
 duration: 35min
 date: February 18th, 2026
 remoteAssets: false
@@ -25,7 +24,7 @@ themeConfig:
   Anton Grishin (<a href="https://t.me/alchemmist"><span class="mono-text">@alchemmist</span></a>)
 </p>
 
-Introduction to the EOSP course.
+<span class="mono-text">Introduction to the EOSP course, winter 2026. CU ⨯ CPM</span>
 
 <div class="abs-br m-6 text-xl"> 
   <a href="https://github.com/alchemmist/eosp" target="_blank" class="slidev-icon-btn">
@@ -49,6 +48,8 @@ layout: center
 | <code style="color:#5D3FD3">api</code>         | Getting to know the GitHub API.                      |
 | <code style="color:#FF7F50">github-flow</code> | How are Open Source development processes organized. |
 
+<Footer slot="footer" />
+
 ---
 layout: center
 ---
@@ -68,11 +69,15 @@ What do you think false here?
   <li v-click>Author of blog: <a class="mono-text" href="https://alchemmist.xyz?utm_source=slides">alchemmist.xyz</a></li>
 </ul>
 
+<Footer slot="footer" />
+
 ---
 layout: center
 ---
 
 # Tell us about yourself<MarkerX color="#50C878" title="hello" />
+
+<Footer slot="footer" />
 
 ---
 layout: center
@@ -83,6 +88,8 @@ layout: center
 Source code of project is open to see for everyone.
 
 <span v-click>Open to copy? Open to appropriate? Open to sell?</span>
+
+<Footer slot="footer" />
 
 ---
 layout: image-right
@@ -157,6 +164,8 @@ layout: center
 
 A space where technology is emerging.
 
+<Footer slot="footer" />
+
 ---
 layout: center
 ---
@@ -172,6 +181,8 @@ $9.7 billion by 2024."
   avatar="/assets/pranay-ahlawat.png"
   type="Article"
 />
+
+<Footer slot="footer" />
 
 ---
 layout: center
@@ -190,6 +201,8 @@ Course is totally practice-driven.
 <li v-click>Document, setting and organize projects properly</li>
 <li v-click>Develop skills to build slide deck and pitch project publicly</li>
 </ul>
+
+<Footer slot="footer" />
 
 ---
 layout: center
@@ -218,6 +231,8 @@ layout: center
   </ul>
 </Card>
 </div>
+
+<Footer slot="footer" />
 
 ---
 layout: default
@@ -257,6 +272,8 @@ layout: default
 </Card>
 </div>
 
+<Footer slot="footer" />
+
 ---
 layout: center
 ---
@@ -278,6 +295,8 @@ layout: center
   avatar="/assets/paul-graham.png"
 />
 
+<Footer slot="footer" />
+
 ---
 layout: center
 ---
@@ -286,6 +305,8 @@ layout: center
 
 Go to Figma [board](https://www.figma.com/board/or8qJTXL7iF7vnPMqwgaeL/eosp-brainstorm?node-id=0-1&t=wzrFKYsRS5GCFwnN-1)!
 
+<Footer slot="footer" />
+
 ---
 layout: center
 ---
@@ -293,6 +314,8 @@ layout: center
 # Let's make first step <MarkerX color="#D22B2B" title="live-demo" />
 
 Creating GitHub organization and repo.
+
+<Footer slot="footer" />
 
 ---
 layout: center
@@ -315,6 +338,8 @@ Any tool that can send HTTP requests can work with GitHub API.
   <li v-click><code>curl</code> — raw HTTP from terminal</li>
   <li v-click><code>Python</code> — programmatic access for automation and logic</li>
 </ul>
+
+<Footer slot="footer" />
 
 ---
 layout: two-cols-header
@@ -380,6 +405,8 @@ As result:
 
 </div>
 
+<Footer slot="footer" />
+
 ---
 layout: full
 ---
@@ -387,6 +414,8 @@ layout: full
 # More in [documentation](https://cli.github.com/manual/gh_api)<MarkerX color="#5d3fd3" title="api" />
 
 <Image src="/assets/gh-cli-doc.png" />
+
+<Footer slot="footer" />
 
 ---
 layout: two-cols-header
@@ -453,6 +482,8 @@ As result:
 
 <p v-click="4" id="converted-date" class="absolute px-2 py-1 bg-blue top-22 right-45 opacity-90 color-white transform rotate-10">Sun Dec 14 2025</p>
 <FancyArrow v-click="4" from="(700, 190)" to="[id=converted-date]@bottom" head-size="20" roughness="1" duration="800" delay="100" />
+
+<Footer slot="footer" />
 
 ---
 layout: full
@@ -526,6 +557,8 @@ Add a "quiet" exit (#104)
 
 <span v-click style="color: rgba(0, 0, 0, 0.5)" class="mono-text">\*GraphQL — a query language for APIs that lets you request exactly the data you need in a single query, without extra fields.</span>
 
+<Footer slot="footer" />
+
 ---
 layout: center
 ---
@@ -543,6 +576,8 @@ Understanding these limits is essential when building scalable, reliable systems
   <li v-click>API responses may be delayed or cached; real-time metrics may require retries</li>
   <li v-click>Some endpoints change over time; library must handle API versioning</li>
 </ul>
+
+<Footer slot="footer" />
 
 ---
 layout: two-cols-header
@@ -657,6 +692,8 @@ gitGraph
 }
 </style>
 
+<Footer slot="footer" />
+
 ---
 layout: center
 ---
@@ -670,6 +707,8 @@ layout: center
 <li v-click>Integration with issues and project boards → planning and tracking in one place</li>
 <li v-click>Transparency and collaboration: team members can comment, review, approve, or reject changes</li>
 </ul>
+
+<Footer slot="footer" />
 
 ---
 layout: center
@@ -708,6 +747,8 @@ Approved PR is merged into main and usually triggers deployment.
 </Card>
 
 </div>
+
+<Footer slot="footer" />
 
 ---
 layout: two-cols
@@ -760,6 +801,8 @@ flowchart TB
 
 </div>
 
+<Footer slot="footer" />
+
 ---
 layout: center
 ---
@@ -774,6 +817,8 @@ layout: center
 <li v-click>Automate as much as possible → CI/CD, tests, linters, code quality checks</li>
 <li v-click>Encourage <b>review culture</b> → better code, knowledge sharing, accountability</li>
 </ul>
+
+<Footer slot="footer" />
 
 ---
 layout: end

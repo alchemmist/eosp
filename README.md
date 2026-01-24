@@ -24,5 +24,5 @@ make clean
 Or you can see slides in your browser at `localhost:3000` with run in `slides` dir:
 
 ```sh
-yarn run slidev n-lecture.md
+pnpm slidev n-lecture.md
 ```

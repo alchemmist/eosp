@@ -11,18 +11,18 @@
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/ri": "^1.2.7",
     "@iconify/vue": "^5.0.0",
-    "@slidev/cli": "^52.11.0",
+    "@slidev/cli": "^52.11.3",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
     "codemirror-theme-vars": "^0.1.2",
     "prism-theme-vars": "^0.2.5",
     "slidev-addon-fancy-arrow": "^0.16.0",
-    "slidev-theme-alchemmist": "^0.1.0",
-    "vue": "^3.5.25"
+    "slidev-theme-alchemmist": "link:../../../.local/share/pnpm/global/5/node_modules/slidev-theme-alchemmist",
+    "vue": "^3.5.27"
   },
   "devDependencies": {
-    "playwright-chromium": "^1.57.0",
-    "prettier": "^3.7.4",
+    "playwright-chromium": "^1.58.0",
+    "prettier": "^3.8.1",
     "prettier-plugin-slidev": "^1.0.5"
   },
   "slidev": {
