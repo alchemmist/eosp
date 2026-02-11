@@ -34,3 +34,5 @@ winget
 pacman
 httpx
 rgba
+mypy
+cowsay

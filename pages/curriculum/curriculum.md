@@ -42,7 +42,7 @@ kanban-plugin: board
 - [ ] #homework Install the necessary tools and dependencies. Up the project locally
 - [ ] #homework  And real longread about typing in Python.
 - [ ] #lecture See the core of typing in Python
-- [ ] #live-demo Try to install `mypy` as dev-dependence with `uv` and run on some exaples.
+- [ ] #live-demo Try to install `mypy` as dev-dependence with `uv` and run on some examples.
 - [ ] #lecture What is CI/CD and why it’s important for code quality
 - [ ] #note Show excerpt from the movie “home alone” like example of automated defense system
 - [ ] #live-demo Setup and trying CI/CD in `lib`

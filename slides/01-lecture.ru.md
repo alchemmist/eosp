@@ -4,7 +4,7 @@ addons:
   - fancy-arrow
 title: Introduction to course.
 info: |
-  Первая лекция курса "Eneineering Open Source Projects".
+  Первая лекция курса "Engineering Open Source Projects".
   Антон Гришин, в рамках образовательного проекта CPM и CU 2026.
 drawings:
   persist: false
