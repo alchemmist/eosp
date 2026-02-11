@@ -36,3 +36,5 @@ httpx
 rgba
 mypy
 cowsay
+Navendu
+Pottekkat
