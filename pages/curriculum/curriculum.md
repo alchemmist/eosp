@@ -21,7 +21,7 @@ kanban-plugin: board
 
 ## Lecture 2
 
-- [ ] #homework Read longreads about GitHub flow (lecture 1). And read longread about testing on Python (preparing for lecture 2)
+- [ ] #homework Read longreads about GitHub flow (lecture 1). And read longread about testing on Python (preparing for lecture 2).
 - [ ] #lecture Learning how to work with the uv package manager
 - [ ] #lecture Why library is the core of the whole system. Library as lowest level interface
 - [ ] #lecture Review of `lib` repository structure and library design
@@ -40,6 +40,9 @@ kanban-plugin: board
 
 - [ ] #homework Open at least one issue describing improvements, bugs or refactor
 - [ ] #homework Install the necessary tools and dependencies. Up the project locally
+- [ ] #homework  And real longread about typing in Python.
+- [ ] #lecture See the core of typing in Python
+- [ ] #live-demo Try to install `mypy` as dev-dependence with `uv` and run on some exaples.
 - [ ] #lecture What is CI/CD and why it’s important for code quality
 - [ ] #note Show excerpt from the movie “home alone” like example of automated defense system
 - [ ] #live-demo Setup and trying CI/CD in `lib`
@@ -108,6 +111,7 @@ kanban-plugin: board
 - [ ] #lecture Introduction to Asynchronous Programming in Python
 - [ ] #note Create `CONTRIBUTING.md` guide
 - [ ] #note Create `CODE_OF_CONDUCT.md` guide
+- [ ] #note use cowsay (and other \* say in slides)
 - [ ] #note Write blog post about our project and share it on Habr, Medium, Devto
 - [ ] #note How to make a releases and versioning you product: https://semver.org/
 - [ ] #note Use for PR: https://github.com/decentralizedlabs/pr-codex

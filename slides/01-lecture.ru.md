@@ -1,34 +1,30 @@
 ---
-theme: ./theme
+theme: alchemmist
 addons:
   - fancy-arrow
-fonts:
-  sans: "CMU-Roman"
-  serif: "CMU-Roman"
-  mono: "CMU-Typewriter"
-  provider: none
-title: Введение в курс.
+title: Introduction to course.
 info: |
-  Первая лекция курса "Engineering Open Source Projects".
-  Создана Антоном Гришиным в рамках образовательного проекта CPM и CU 2026.
+  Первая лекция курса "Eneineering Open Source Projects".
+  Антон Гришин, в рамках образовательного проекта CPM и CU 2026.
 drawings:
   persist: false
-transition: slide-left
-mdc: true
 duration: 35min
-date: 18 февраля 2026
+date: 18 Февраля, 2026
+remoteAssets: false
 layout: intro
 themeConfig:
+  paginationX: r
+  paginationY: t
   paginationPagesDisabled: [1, 4, 5, 6, 7]
 ---
 
 # Engineering Open Source Projects
 
 <p>
-  Anton Grishin (<a href="https://t.me/alchemmist"><span class="mono-text">@alchemmist</span></a>)
+  Антон Гришин (<a href="https://t.me/alchemmist"><span class="mono-text">@alchemmist</span></a>)
 </p>
 
-Введение в курс EOSP.
+Введение в курс EOSP, зима 2026. ЦУ ⨯ ЦПМ
 
 <div class="abs-br m-6 text-xl"> 
   <a href="https://github.com/alchemmist/eosp" target="_blank" class="slidev-icon-btn">
@@ -44,13 +40,15 @@ layout: center
 
 |                                                |                                                   |
 | ---------------------------------------------- | ------------------------------------------------- |
-| <code style="color:#50C878">hello</code>       | Лучше познакомимся друг с другом.                 |
+| <code style="color:#50C878">hello</code>       | Знакомимся друг с другом.                         |
 | <code style="color:#0096FF">open-source</code> | Погружаемся в мир OpenSource.                     |
 | <code style="color:#FFBF00">course</code>      | Разберём, что нас ждёт на курсе.                  |
 | <code style="color:#FF69B4">practice</code>    | Придумаем название для проекта вместе.            |
 | <code style="color:#D22B2B">live-demo</code>   | Закладываем основу проекта вместе.                |
 | <code style="color:#5D3FD3">api</code>         | Познакомимся с GitHub API.                        |
-| <code style="color:#FF7F50">github-flow</code> | Как организованы процессы разработки Open Source. |
+| <code style="color:#FF7F50">github-flow</code> | Процессы разработки Open Source. |
+
+<Footer slot="footer" />
 
 ---
 layout: center
