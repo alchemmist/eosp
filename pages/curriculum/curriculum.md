@@ -21,18 +21,15 @@ kanban-plugin: board
 
 ## Lecture 2
 
-- [ ] #homework Read longreads about GitHub flow (lecture 1). And read longread about testing on Python (preparing for lecture 2).
-- [ ] #lecture Learning how to work with the uv package manager
-- [ ] #lecture Why library is the core of the whole system. Library as lowest level interface
-- [ ] #lecture Review of `lib` repository structure and library design
-- [ ] #live-demo - Adding first metric end-to-end (API → logic → test)
-- [ ] #practice Students at pairs try to solve issue and sent pull request
-	(*I’m reject it because this haven’t tests and we start to talk about testing*)
-- [ ] #lecture Why testing is best way for up and hold code quality. The correct perception of testing: not privilege, base minimum. The image of protective wall.
-- [ ] #note Tell interesting thing: in Postgres, which we looked in previous lecture, count of unit testing limited and you can’t write a unit test if it not essential. This making for test checking passing fast.
-- [ ] #note Use learn-go-with-tests course for preparing materials about testing
-- [ ] #lecture How to write tests on Python? Test Driven Development
-- [ ] #practice Students adding tests to their pull requests. (*They can swap code writer in pair*)
+- [ ] #homework Read longread about GitHub flow.
+- [ ] #homework Real longread about testing on Python.
+- [ ] #lecture Why library is the core of the whole system. Library as lowest level interface.
+- [ ] #lecture What is typing? Why we need to use typeing? See the core of typing in Python
+- [ ] #lecture Learning how to work with the uv package manager.
+- [ ] #practice Students install the `uv`. And clone the repostiroy
+- [ ] #lecture Review of `lib` repository structure and library design.
+- [ ] #live-demo Try to install `mypy` as dev-dependence with `uv` and run on some examples.
+- [ ] #live-demo Adding first metric end-to-end (API → logic → test)
 - [ ] #note Announcement of next lecture
 
 
@@ -40,32 +37,29 @@ kanban-plugin: board
 
 - [ ] #homework Open at least one issue describing improvements, bugs or refactor
 - [ ] #homework Install the necessary tools and dependencies. Up the project locally
-- [ ] #homework  And real longread about typing in Python.
-- [ ] #lecture See the core of typing in Python
-- [ ] #live-demo Try to install `mypy` as dev-dependence with `uv` and run on some examples.
-- [ ] #lecture What is CI/CD and why it’s important for code quality
+- [ ] #homework  And real longread about testing in Python.
+- [ ] #lecture Why testing is best way for up and hold code quality. The correct perception of testing: not privilege, base minimum. The image of protective wall.
+- [ ] #note Tell interesting thing: in Postgres, which we looked in previous lecture, count of unit testing limited and you can’t write a unit test if it not essential. This making for test checking passing fast.
+- [ ] #lecture How to write tests on Python? Test Driven Development
+- [ ] #practice Students at pairs try to solve issue and sent pull request
+	(*I’m reject it because this haven’t tests and we start to talk about testing*)
 - [ ] #note Show excerpt from the movie “home alone” like example of automated defense system
-- [ ] #live-demo Setup and trying CI/CD in `lib`
-- [ ] #live-demo How we build a new release of `lib` and publish it manually
-- [ ] #lecture How to make auto-deploy release of `lib`
-- [ ] #lecture What is cli: commands, flags, exit codes. Difference between gui, tui and cli
-- [ ] #lecture Why CLI exists: when library is not useful
-- [ ] #lecture Show examples of very popular cli
+- [ ] #practice Students adding tests to their pull requests. (*They can swap code writer in pair*)
 - [ ] #lecture Fast review of licenses in Open Source
 - [ ] #note Announcement of next lecture
+- [ ] #note Use learn-go-with-tests course for preparing materials about testing
 
 
 ## Lecture 4
 
 - [ ] #homework Write a documentation for library at GitHub wiki
 - [ ] #homework Make pull request with `LICENSE` to our repose and justify why this type of license is suitable for us
-- [ ] #lecture How to write a cli with `click` python library
-- [ ] #lecture Review of `cli` repository structure
-- [ ] #live-demo Setup auto deploy on release of `cli`
-- [ ] #lecture How telegram bots works in general
-- [ ] #lecture How (and why) to use `python-telegram-bot` for creating telegram bots
-- [ ] #lecture How do we hide secrets from visitors to our repository and hackers
-- [ ] #lecture Review of `bot` repository structure
+- [ ] #lecture What is cli: commands, flags, exit codes. Difference between gui, tui and cli
+- [ ] #lecture Show examples of very popular cli
+- [ ] #lecture What is CI/CD and why it’s important for code quality
+- [ ] #live-demo Setup and trying CI/CD in `lib`
+- [ ] #live-demo How we build a new release of `lib` and publish it manually
+- [ ] #lecture How to make auto-deploy release of `lib`
 - [ ] #note Announcement of next lecture
 
 
@@ -74,6 +68,12 @@ kanban-plugin: board
 - [ ] #homework Add example usage of `lib` to wiki documentation
 - [ ] #lecture How to write honest and attractive `README`
 - [ ] #note Announcement of next lecture
+- [ ] #lecture How to write a cli with `click` python library
+- [ ] #lecture How telegram bots works in general
+- [ ] #lecture How (and why) to use `python-telegram-bot` for creating telegram bots
+- [ ] #lecture How do we hide secrets from visitors to our repository and hackers
+- [ ] #lecture Review of `cli` repository structure
+- [ ] #live-demo Setup auto deploy on release of `cli`
 
 
 ## Lecture 6
@@ -85,6 +85,7 @@ kanban-plugin: board
 - [ ] #practice Common make a draft of pitching and slide deck
 - [ ] #lecture Hacks about how to make a good pitching
 - [ ] #lecture Hacks about how to make a good slide deck
+- [ ] #lecture Review of `bot` repository structure
 - [ ] #note Announcement of next lecture
 
 

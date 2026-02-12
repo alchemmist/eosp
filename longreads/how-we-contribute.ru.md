@@ -267,6 +267,26 @@ request-а.
 и исправленный баг. Это будет отличным примером реализации TDD
 (Test Driven Development) подхода.
 
+<br>
+
+---
+
+<br>
+
+Таким образом мы с вами прошли полный цикл от проблемы до вклада
+в master-ветку:
+
+```mermaid
+flowchart LR
+    BUG["Find a bug / Need feature"] --> ISSUE["Create Issue"]
+    ISSUE --> DISCUSS["Discussion / Planning"]
+    DISCUSS --> PR["Open Pull Request"]
+    PR --> CI["PR Checks with CI"]
+    CI --> REVIEW["Reviewer Reviews PR"]
+    REVIEW --> MERGE["Merge PR into main"]
+    MERGE --> BUG
+```
+
 Вы можете проверить свои силы уже сейчас, найдя подходящий issue
 с помощью этих прекрасных сервисов:
 
