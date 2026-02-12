@@ -28,8 +28,8 @@ kanban-plugin: board
 - [ ] #lecture Learning how to work with the uv package manager.
 - [ ] #practice Students install the `uv`. And clone the repostiroy
 - [ ] #lecture Review of `lib` repository structure and library design.
-- [ ] #live-demo Try to install `mypy` as dev-dependence with `uv` and run on some examples.
 - [ ] #live-demo Adding first metric end-to-end (API → logic → test)
+- [ ] #live-demo Try to install `mypy` as dev-dependence with `uv` and run on some examples.
 - [ ] #note Announcement of next lecture
 
 

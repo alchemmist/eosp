@@ -1,7 +1,7 @@
 <template>
   <footer class="slidev-footer">
     <div class="left" v-if="!hideLogos">
-      <img src="/assets/cu-logo.svg" alt="Central University" />
+      <img src="/assets/cu-logo-2.svg" alt="Central University" />
       <img src="/assets/cpm-logo.svg" alt="Center of pedagogical excellence" />
       <img src="/assets/in-science-senter-logo.svg" alt="In center of science" />
     </div>
