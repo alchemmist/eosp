@@ -22,7 +22,7 @@ kanban-plugin: board
 ## Lecture 2
 
 - [ ] #homework Read longread about GitHub flow.
-- [ ] #homework Real longread about testing on Python.
+- [ ] #homework Read longread about typed Python.
 - [ ] #lecture Why library is the core of the whole system. Library as lowest level interface.
 - [ ] #lecture What is typing? Why we need to use typeing? See the core of typing in Python
 - [ ] #lecture Learning how to work with the uv package manager.
@@ -35,9 +35,11 @@ kanban-plugin: board
 
 ## Lecture 3
 
-- [ ] #homework Open at least one issue describing improvements, bugs or refactor
-- [ ] #homework Install the necessary tools and dependencies. Up the project locally
-- [ ] #homework  And real longread about testing in Python.
+- [ ] #homework Install `uv`. Clone project locally. Install dependencies. Play with different `uv` commands.
+- [ ] #homework Read longread about typed Python. Play with code examples, try to run different type-checkers. And read slides from lecture.
+- [ ] #homework Optionally, open new issue.
+- [ ] #homework Register account on pypi.org.
+- [ ] #homework Close issue about personal data in `pyrpoject.toml`. Send pull requests.
 - [ ] #lecture Why testing is best way for up and hold code quality. The correct perception of testing: not privilege, base minimum. The image of protective wall.
 - [ ] #note Tell interesting thing: in Postgres, which we looked in previous lecture, count of unit testing limited and you can’t write a unit test if it not essential. This making for test checking passing fast.
 - [ ] #lecture How to write tests on Python? Test Driven Development
