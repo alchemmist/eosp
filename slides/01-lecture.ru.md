@@ -9,13 +9,15 @@ info: |
 drawings:
   persist: false
 duration: 35min
-date: 18 Февраля, 2026
+date: 5 Февраля, 2026
 remoteAssets: false
 layout: intro
 themeConfig:
   paginationX: r
   paginationY: t
-  paginationPagesDisabled: [1, 4, 5, 6, 7]
+  paginationPagesDisabled: [1, 6, 7, 8, 9]
+  footerComponent: Footer
+  footerPagesDisabled: [1, 6, 7, 8, 9, 22, 24, 32]
 ---
 
 # Engineering Open Source Projects
@@ -48,7 +50,6 @@ layout: center
 | <code style="color:#5D3FD3">api</code>         | Познакомимся с GitHub API.                        |
 | <code style="color:#FF7F50">github-flow</code> | Процессы разработки Open Source. |
 
-<Footer slot="footer" />
 
 ---
 layout: center

@@ -9,13 +9,15 @@ info: |
 drawings:
   persist: false
 duration: 95min
-date: February 25th, 2026
+date: February 12th, 2026
 remoteAssets: false
 layout: intro
 themeConfig:
   paginationX: r
   paginationY: t
   paginationPagesDisabled: [1, 4, 5, 6, 7]
+  footerComponent: Footer
+  footerPagesDisabled: [1]
 ---
 
 # Start coding typed Python
@@ -38,26 +40,13 @@ layout: center
 
 # Table of contents
 
-|                                              |                                                              |
-| -------------------------------------------- | ------------------------------------------------------------ |
+|                                              |                                                             |
+| -------------------------------------------- | ----------------------------------------------------------- |
 | <code style="color:#0096FF">lib</code>       | Why library is the core of the whole system.                |
 | <code style="color:#50C878">typing</code>    | Typing in Python: from basics to practical static analysis. |
 | <code style="color:#FFBF00">code</code>      | Review of the `lib-demo` repository structure.              |
 | <code style="color:#D22B2B">live-demo</code> | Add one metric end-to-end and run `mypy`.                   |
 | <code style="color:#5D3FD3">uv</code>        | Dependency and tooling workflow with `uv`.                  |
-
-<Footer slot="footer" />
-
----
-layout: center
----
-
-# Why library is core of the whole system<MarkerX color="#0096FF" title="lib" />
-
-Library is the lowest reusable interface:
-it exposes capabilities that many higher-level tools build on top of.
-
-<Footer slot="footer" />
 
 ---
 layout: two-cols-header
@@ -69,14 +58,32 @@ From low-level primitives to user-facing products.
 
 ::left::
 
-<div v-click="1" style="width: 180px;">
+<div v-click="1" style="width: 170px;">
 
 ```mermaid
 flowchart TD
     LIB[Library API] --> SDK[SDK / Framework]
+    LIB --> SDK
+    LIB --> SDK
     SDK --> APP[Application / Service]
+    SDK --> APP
+    SDK --> APP
+    SDK --> APP
     APP --> UI[CLI / GUI / Bot / Web]
+    APP --> UI
+    APP --> UI
+    APP --> UI
+    APP --> UI
+    APP --> UI
     UI --> USER[End user]
+    UI --> USER
+    UI --> USER
+    UI --> USER
+    UI --> USER
+    UI --> USER
+    UI --> USER
+    UI --> USER
+    UI --> USER
 
     classDef core fill:#d9f2ff,stroke:#0096FF,color:#0b2e4f;
     class LIB core
@@ -87,160 +94,23 @@ flowchart TD
 ::right::
 
 <ul>
-  <li v-click="2">Library defines stable primitives and contracts</li>
-  <li v-click="3">Upper layers can change without rewriting the core</li>
-  <li v-click="4">The lower the layer, the wider the potential reuse</li>
-  <li v-click="5">Backward compatibility pressure is highest at this layer</li>
+  <li v-click="2">Library it's a lowest interface.</li>
+  <li v-click="2">Library defines stable primitives and contracts.</li>
+  <li v-click="3">Upper layers can change without rewriting the core.</li>
+  <li v-click="4">The lower the layer, the wider the potential reuse.</li>
+  <li v-click="5">Backward compatibility pressure is highest at this layer.</li>
 </ul>
 
-<Footer slot="footer" />
-
----
-layout: two-cols-header
 ---
 
-# Famous libraries everywhere<MarkerX color="#0096FF" title="lib" />
+# Most popular examples<MarkerX color="#0096FF" title="lib" />
 
-Most users consume apps, not libraries directly.
-
-::left::
-
-| Library | Where it appears |
-| ------- | ---------------- |
-| `libc` | almost every Unix program |
-| `OpenSSL` | HTTPS, certificates, secure APIs |
-| `zlib` | zip/png/http compression |
-| `SQLite` | browsers, messengers, mobile apps |
-
-::right::
-
-<ul>
-  <li v-click>Users often do not know these names</li>
-  <li v-click>Most teams consume them indirectly via frameworks</li>
-  <li v-click>But millions of products depend on them daily</li>
-  <li v-click>A good library gets huge reach through integrations</li>
-  <li v-click>This is the strongest leverage point for engineering impact</li>
-</ul>
-
-<Footer slot="footer" />
-
----
-layout: two-cols-header
----
-
-# Case study: C standard library (`libc`)<MarkerX color="#0096FF" title="lib" />
-
-Most C/C++ programs touch `libc` from first lines of code.
-
-::left::
-
-```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-int main(void) {
-    char *buf = malloc(128);
-    strcpy(buf, "hello");
-    printf("%s\n", buf);
-    free(buf);
-    return 0;
-}
-```
-
-::right::
-
-<ul>
-  <li v-click><code>printf</code>, <code>malloc</code>, <code>free</code>, <code>memcpy</code> are core primitives</li>
-  <li v-click>Shell tools, databases, servers, compilers all rely on them</li>
-  <li v-click>App UX may change, but low-level contracts stay stable for years</li>
-  <li v-click>If these contracts break, the blast radius is ecosystem-wide</li>
-</ul>
-
-<Footer slot="footer" />
-
----
-layout: center
----
-
-# Case study: OpenSSL<MarkerX color="#0096FF" title="lib" />
-
-Library first, products second.
-
-
-<div v-click="1" style="width: 550px;">
-
-```mermaid
-%%{init: {"flowchart": {"useMaxWidth": true, "curve": "linear"}}}%%
-flowchart TD
-    SSL[OpenSSL library] --> NGINX[Nginx]
-    SSL --> CURL[curl]
-    SSL --> GIT[git clients]
-    SSL --> PY[Python requests stack]
-    SSL --> APPS[Thousands of apps]
-```
-
-</div>
-
-<ul>
-  <li v-click>End users think they use a browser, messenger, bank app</li>
-  <li v-click>Under the hood they use TLS primitives from a library</li>
-  <li v-click>One library improvement propagates to a huge ecosystem</li>
-  <li v-click>One vulnerability also propagates fast, so quality bar is high</li>
-</ul>
-
-<Footer slot="footer" />
-
----
-layout: two-cols-header
----
-
-# Case study: `zlib` and `SQLite`<MarkerX color="#0096FF" title="lib" />
-
-Invisible components with huge practical surface area.
-
-::left::
-
-`zlib` in real traffic:
-
-```python
-import zlib
-
-payload = b"hello" * 1000
-compressed = zlib.compress(payload, level=6)
-raw = zlib.decompress(compressed)
-assert raw == payload
-```
-
-Used in:
-<ul>
-  <li v-click>HTTP <code>gzip</code>/<code>deflate</code></li>
-  <li v-click>ZIP and many package formats</li>
-  <li v-click>PNG internal chunks</li>
-</ul>
-
-::right::
-
-`SQLite` in local products:
-
-```python
-import sqlite3
-
-conn = sqlite3.connect("app.db")
-conn.execute("create table if not exists events(ts int, name text)")
-conn.execute("insert into events values (?, ?)", (1739320000, "start"))
-conn.commit()
-```
-
-Used in:
-<ul>
-  <li v-click>Browsers, mobile apps, messengers, IDEs often embed this model</li>
-  <li v-click>Users almost never notice it, but they rely on it every day</li>
-  <li v-click>This is exactly why library layer gives maximal audience reach</li>
-  <li v-click>Distribution comes through adoption chains, not direct marketing</li>
-</ul>
-
-<Footer slot="footer" />
+| **Library** | **What it is**                                                                                                                                                                 |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `libc`      | Standard C runtime library.<br> Present in almost every C/Unix program via core primitives (`printf`, `malloc`, `memcpy`).<br> Stable contracts underpin entire OS ecosystems. |
+| `OpenSSL`   | Cryptography and TLS implementation library.<br> Used by browsers, curl, git, Python requests.<br> Security fixes or bugs immediately affect huge parts of the internet.       |
+| `zlib`      | General-purpose compression library.<br> Powers gzip/deflate in HTTP, ZIP archives, PNG files.<br> Small API, massive invisible reach.                                         |
+| `SQLite`    | Embedded relational database engine.<br> Shipped inside browsers, mobile apps, IDEs.<br> Adoption spreads through embedding, not direct usage.                                 |
 
 ---
 layout: two-cols-header
@@ -266,13 +136,11 @@ flowchart TD
 ::right::
 
 <ul>
-  <li v-click>Low-level API is reused by many teams and products</li>
-  <li v-click>Consumers may not know your name, but still use your code daily</li>
-  <li v-click>This is strategic leverage: one core, many channels</li>
-  <li v-click>Library quality decisions compound across every dependent product</li>
+  <li v-click="2">Low-level API is reused by many teams and products</li>
+  <li v-click="3">Consumers may not know your name, but still use your code daily</li>
+  <li v-click="4">This is strategic leverage: one core, many channels</li>
+  <li v-click="5">Library quality decisions compound across every dependent product</li>
 </ul>
-
-<Footer slot="footer" />
 
 ---
 layout: center
@@ -281,7 +149,6 @@ layout: center
 # What makes a library truly reusable<MarkerX color="#0096FF" title="lib" />
 
 Reach appears only if the interface is engineered well.
-
 
 <ul>
   <li v-click>Stable API contracts (minimal breaking changes)</li>
@@ -294,90 +161,119 @@ Reach appears only if the interface is engineered well.
   <li v-click>Performance and security as part of API design</li>
 </ul>
 
-<Footer slot="footer" />
-
----
-layout: center
----
-
-# Library mindset<MarkerX color="#0096FF" title="lib" />
-
-Build primitives, not just features.
-
-<ul>
-  <li v-click>App feature solves one product scenario</li>
-  <li v-click>Library primitive can solve many scenarios in many products</li>
-  <li v-click>That is why the library layer is the most scalable engineering asset</li>
-  <li v-click>Your best bet for long-term impact is a clean, dependable public API</li>
-</ul>
-
-<Footer slot="footer" />
-
 ---
 layout: center
 ---
 
 # Typed Python<MarkerX color="#50C878" title="typing" />
 
-Today we treat typing as an engineering tool, not syntax decoration.
-
-<ul>
-  <li v-click>How to model real contracts at API and domain boundaries</li>
-  <li v-click>How to keep code readable while making static checks strict</li>
-  <li v-click>How to avoid common anti-patterns that make typing noisy</li>
-  <li v-click>Practical recommendations you can apply right after the lecture</li>
-</ul>
-
-<Footer slot="footer" />
+Why and how to write typed Python?
 
 ---
 layout: two-cols-header
+gap: 30px
 ---
 
 # Dynamic vs static typing<MarkerX color="#50C878" title="typing" />
 
-Same business logic, different failure moment.
+<p>1. Where we will get error?
+<br>
+2. What's better?</p>
 
 ::left::
 
-<div v-click>
+C --- error before run:
 
-C (error before run):
-
-```c
+````md magic-move {duration:300} {lines: true}
+```c {all} {lines: true}
 int discount(int total_cents, int percent) {
     return total_cents - total_cents * percent / 100;
 }
-// discount("1000", 15); // compile-time type error
+
+
+discount("1000", 15);
 ```
 
-</div>
+```c {all} {lines: true}
+int discount(int total_cents, int percent) {
+    return total_cents - total_cents * percent / 100;
+}
 
-<div v-click>
-
-Python without checks (error during execution path):
-
-```python
-def discount(total_cents, percent):
-    return total_cents - total_cents * percent / 100
-
-# comes from request payload
-total = "1000"
-price = discount(total, 15)  # runtime failure
+discount("1000", 15);
+//  compile-time error
 ```
-
-</div>
+````
 
 ::right::
 
-<ul>
-  <li v-click="3">Static typing shifts many failures to development stage</li>
-  <li v-click="4">In Python, annotations + analyzers emulate this safety net</li>
-  <li v-click="5">Recommendation: enforce typing first on public library API</li>
-  <li v-click="6">Practice note: late type errors in boundary code are expensive to debug</li>
-</ul>
+Python (_without checks_) --- error during execution path:
 
-<Footer slot="footer" />
+````md magic-move {duration:300}
+```python {all} {lines:true}
+def discount(total_cents, percent):
+    return total_cents - total_cents * percent / 100
+
+price = discount("1000", 15)
+```
+
+```python {all} {lines:true}
+def discount(total_cents, percent):
+    return total_cents - total_cents * percent / 100
+    #  runtime error
+
+price = discount("1000", 15)
+```
+````
+
+---
+layout: center
+---
+
+<style scoped>
+:deep(.my-auto) {
+  width: 100%;
+}
+</style>
+
+# Error detection levels
+
+<div v-click>
+
+```mermaid
+flowchart LR
+    %% Levels
+    A[IDE] --> B[Tests] --> C[Checkers] --> D[CI] --> E[Code Review] --> F[QA] --> G[End users]
+
+    %% Coloring gradient from green to red
+    classDef ide fill:#a8e6a3,stroke:#4caf50,stroke-width:2px;
+    classDef tests fill:#c4e3a8,stroke:#8bc34a,stroke-width:2px;
+    classDef analysis fill:#e2e6a8,stroke:#cddc39,stroke-width:2px;
+    classDef ci fill:#f7e3a8,stroke:#ffeb3b,stroke-width:2px;
+    classDef review fill:#f5c29f,stroke:#ff9800,stroke-width:2px;
+    classDef qa fill:#f09b95,stroke:#f44336,stroke-width:2px;
+    classDef users fill:#e76a6a,stroke:#b71c1c,stroke-width:2px;
+
+    %% Assign classes
+    A:::ide
+    B:::tests
+    C:::analysis
+    D:::ci
+    E:::review
+    F:::qa
+    G:::users
+```
+
+</div>
+
+<div class="h-10"></div>
+
+<Card v-click="2" title="What's better C or Python?">
+  <ul>
+    <li v-click="3">C.</li>
+    <li v-click="4">Because we see error at early step: compilation.</li>
+    <li v-click="5">But Python may be get closer to that with typing<br> and analyzers.</li>
+  </ul>
+</Card>
 
 ---
 layout: center
@@ -386,64 +282,23 @@ layout: center
 # Typing in Python is for code quality<MarkerX color="#50C878" title="typing" />
 
 <ul>
-  <li v-click>Not for Python runtime speed by itself</li>
-  <li v-click>For early bug detection before production</li>
-  <li v-click>For clearer interfaces and cleaner architecture</li>
-  <li v-click>For better IDE hints and safer refactoring</li>
-  <li v-click>For reducing trivial test cases about primitive mismatches</li>
-  <li v-click>Recommendation: combine strict typing with focused business tests</li>
+  <li v-click>Not for Python runtime speed by itself (<a href="https://bernsteinbear.com/blog/typed-python/">or not 🤔</a>).</li>
+  <li v-click>For early bug detection before production.</li>
+  <li v-click>For clearer interfaces and cleaner architecture.</li>
+  <li v-click>For better IDE/PDE hints and safer refactoring.</li>
+  <li v-click>For reducing trivial test cases about primitive mismatches.</li>
+  <li v-click>Recommendation: combine strict typing with focused business tests.</li>
 </ul>
-
-<Footer slot="footer" />
 
 ---
 layout: two-cols-header
 ---
 
-# Interface, abstract class, protocol<MarkerX color="#50C878" title="typing" />
-
-Three related tools, different coupling.
-
-::left::
-
-<ul>
-  <li v-click><b>Interface</b>: only abstract methods</li>
-  <li v-click><b>Abstract class</b>: abstract + implemented methods</li>
-  <li v-click><b>Protocol</b>: structural typing (implicit interface)</li>
-  <li v-click>Recommendation: prefer protocol for pluggable adapters</li>
-</ul>
-
-::right::
-
-<div v-click="4">
-
-```python
-from typing import Protocol
-from collections.abc import Iterable
-
-class UserRepo(Protocol):
-    def save(self, login: str) -> None: ...
-    def all(self) -> Iterable[str]: ...
-
-class SqliteRepo:
-    def save(self, login: str) -> None:
-        ...
-    def all(self) -> list[str]:
-        return ["alice", "bob"]
-
-def export(repo: UserRepo) -> list[str]:
-    return [u.upper() for u in repo.all()]
-```
-
-`SqliteRepo` matches protocol without inheritance.
-
-</div>
-
-<Footer slot="footer" />
-
----
-layout: two-cols-header
----
+<!-- <style scoped> -->
+<!-- :deep(h1) { -->
+<!--   margin-top: 100px; -->
+<!-- } -->
+<!-- </style> -->
 
 # Primitive annotations<MarkerX color="#50C878" title="typing" />
 
@@ -469,8 +324,6 @@ def compute_fee(amount: Decimal, fee_rate: float) -> Decimal:
   <li v-click>Recommendation: for money, prefer <code>Decimal</code> over <code>float</code></li>
   <li v-click>Recommendation: annotate return type even when it seems obvious</li>
 </ul>
-
-<Footer slot="footer" />
 
 ---
 layout: two-cols-header
@@ -507,8 +360,6 @@ def parse_positive_int(value: str) -> int | None:
   <li v-click>Recommendation: keep union small and semantically clear</li>
 </ul>
 
-<Footer slot="footer" />
-
 ---
 layout: two-cols-header
 ---
@@ -541,8 +392,6 @@ def total_prs(by_user: dict[str, int]) -> int:
   <li v-click>Practice note: most bugs in metrics code happen in data shape assumptions</li>
 </ul>
 
-<Footer slot="footer" />
-
 ---
 layout: two-cols-header
 ---
@@ -572,8 +421,6 @@ def patch_config(cfg: MutableMapping[str, str]) -> None:
   <li v-click>Recommendation: narrower input contract makes side effects explicit</li>
   <li v-click>Practice note: this small choice improves code review quality a lot</li>
 </ul>
-
-<Footer slot="footer" />
 
 ---
 layout: two-cols-header
@@ -606,8 +453,6 @@ def print_user(user: User) -> str:
   <li v-click>If mutability is needed, prefer <code>dataclass</code></li>
   <li v-click>Recommendation: use for small query result rows and snapshots</li>
 </ul>
-
-<Footer slot="footer" />
 
 ---
 layout: two-cols-header
@@ -644,8 +489,6 @@ def from_payload(data: RepoPayload) -> str:
   <li v-click>Practice note: keeps API chaos away from business logic</li>
 </ul>
 
-<Footer slot="footer" />
-
 ---
 layout: two-cols-header
 ---
@@ -681,8 +524,6 @@ class User:
   <li v-click>Practice note: once behavior grows heavy, switch to regular class</li>
 </ul>
 
-<Footer slot="footer" />
-
 ---
 layout: two-cols-header
 ---
@@ -715,8 +556,6 @@ def can_merge(status: Status) -> bool:
   <li v-click>Recommendation: map external strings to enum right after parsing</li>
   <li v-click>Practice note: enum is cheap and prevents many typo-level bugs</li>
 </ul>
-
-<Footer slot="footer" />
 
 ---
 layout: two-cols-header
@@ -755,8 +594,6 @@ def add_friend(team: Team, user: User, friend: User) -> None:
   <li v-click>Practice note: this reduces accidental cross-layer coupling over time</li>
 </ul>
 
-<Footer slot="footer" />
-
 ---
 layout: two-cols-header
 ---
@@ -785,8 +622,6 @@ def top3(values: Iterable[int]) -> list[int]:
   <li v-click>Recommendation: annotate by behavior required by the algorithm</li>
   <li v-click>Practice note: this reduces accidental over-coupling to <code>list</code></li>
 </ul>
-
-<Footer slot="footer" />
 
 ---
 layout: two-cols-header
@@ -823,7 +658,110 @@ def median3(values: Sequence[int]) -> int:
   <li v-click>Practice note: this keeps APIs compatible with generators/streams</li>
 </ul>
 
-<Footer slot="footer" />
+---
+layout: two-cols-header
+---
+
+# Interface | Abstract class | Protocol<MarkerX color="#50C878" title="typing" />
+
+Three related tools, different coupling.
+
+<ul>
+  <li v-click="1"><b>Interface</b>: only abstract methods</li>
+  <li v-click="6"><b>Abstract class</b>: abstract + implemented methods</li>
+  <li v-click="7"><b>Protocol</b>: implicit interface</li>
+</ul>
+
+::left::
+
+<div v-click="2">
+
+````md magic-move {at:3, lines:true, duration:300}
+```python {3-5|7-11|13-14|16}
+from collections.abc import Iterable
+
+class UserRepo():
+    def save(self, login: str) -> None: ...
+    def all(self) -> Iterable[str]: ...
+
+class SqliteRepo(UserRepo):
+    def save(self, login: str) -> None:
+        self._db.save(login)
+    def all(self) -> list[str]:
+        self._db.get_logins()
+
+def export(repo: UserRepo) -> list[str]:
+    return [u.upper() for u in repo.all()]
+
+export(SqliteRepo()) # no problems
+```
+
+```python {4-5}
+from collections.abc import Iterable
+
+class UserRepo():
+    def save(self, login: str) -> None:
+        self._db.save(login)
+    def all(self) -> Iterable[str]: ...
+
+class SqliteRepo(UserRepo):
+    def all(self) -> list[str]:
+        self._db.get_logins()
+
+def export(repo: UserRepo) -> list[str]:
+    return [u.upper() for u in repo.all()]
+
+export(SqliteRepo()) # no problems
+```
+
+```python {2|2|2}
+from collections.abc import Iterable
+
+class UserRepo():
+    def save(self, login: str) -> None:
+    def all(self) -> Iterable[str]: ...
+
+class SqliteRepo(UserRepo):
+    def all(self) -> list[str]:
+        self._db.get_logins()
+    def save(self, login: str) -> None:
+        self._db.save(login)
+
+def export(repo: UserRepo) -> list[str]:
+    return [u.upper() for u in repo.all()]
+
+export(SqliteRepo()) # no problems
+```
+````
+
+</div>
+
+::right::
+
+<div v-click="7">
+
+````md magic-move {at:8, lines:true}
+```python {1,3|7|13-16}
+from typing import Protocol
+
+class UserRepo(Protocol):
+    def save(self, login: str) -> None: ...
+    def all(self) -> Iterable[str]: ...
+
+class SqliteRepo:
+    def all(self) -> list[str]:
+        self._db.get_logins()
+    def save(self, login: str) -> None:
+        self._db.save(login)
+
+def export(repo: UserRepo) -> list[str]:
+    return [u.upper() for u in repo.all()]
+
+export(SqliteRepo()) # no problems
+```
+````
+
+</div>
 
 ---
 layout: two-cols-header
@@ -860,8 +798,6 @@ def retry(
   <li v-click>Practice note: production bugs often hide in callback contracts</li>
 </ul>
 
-<Footer slot="footer" />
-
 ---
 layout: two-cols-header
 ---
@@ -891,8 +827,6 @@ def pick_or_fail(items: Mapping[str, T], key: str) -> T:
   <li v-click>Without generics this collapses to `Any` and safety is lost</li>
   <li v-click>Recommendation: use generics for reusable repository/service helpers</li>
 </ul>
-
-<Footer slot="footer" />
 
 ---
 layout: two-cols-header
@@ -924,8 +858,6 @@ def latest(items: Iterable[TimestampT]) -> TimestampT:
   <li v-click>Bounded generics are a good compromise between flexibility and safety</li>
 </ul>
 
-<Footer slot="footer" />
-
 ---
 layout: two-cols-header
 ---
@@ -955,8 +887,6 @@ def export_report(
   <li v-click>If variants start growing, move from `Literal` to `Enum`</li>
 </ul>
 
-<Footer slot="footer" />
-
 ---
 layout: center
 ---
@@ -975,8 +905,6 @@ layout: center
   <li v-click>Practice note: mixed analyzer requirements usually confuse teams</li>
   <li v-click>In team projects, consistency of diagnostics is more important than tool preference</li>
 </ul>
-
-<Footer slot="footer" />
 
 ---
 layout: two-cols-header
@@ -1008,8 +936,6 @@ uvx ty check
   <li v-click>Pin one analyzer version in CI to avoid random baseline drift</li>
   <li v-click>Keep local command aliases in `Makefile`/scripts for team consistency</li>
 </ul>
-
-<Footer slot="footer" />
 
 ---
 layout: two-cols-header
@@ -1060,12 +986,11 @@ def main() -> None:
 - domain identifier misuse (`NewType` violation)
 
 Recommendation:
+
 - fix type contracts first, then clean call sites
 - do not silence these errors with broad ignores
 
 </div>
-
-<Footer slot="footer" />
 
 ---
 layout: two-cols-header
@@ -1098,8 +1023,6 @@ def fetch_user(user_id: int) -> dict[str, str]: ...
   <li v-click>Keeps typing strict without touching risky implementation paths</li>
 </ul>
 
-<Footer slot="footer" />
-
 ---
 layout: two-cols-header
 ---
@@ -1131,8 +1054,6 @@ type MetricsPayload = dict[MetricName, int | float]
   <li v-click>Recommendation: alias business terms to make signatures readable</li>
   <li v-click>Practice note: this pays off immediately in reviews and docs</li>
 </ul>
-
-<Footer slot="footer" />
 
 ---
 layout: two-cols-header
@@ -1168,8 +1089,6 @@ def get_repo(repo_id: RepoId) -> None:
   <li v-click>Practice note: prevents subtle bugs in service glue code</li>
 </ul>
 
-<Footer slot="footer" />
-
 ---
 layout: center
 ---
@@ -1183,8 +1102,6 @@ layout: center
   <li v-click>Recommendation: enforce strictness per module, not all at once</li>
   <li v-click>Recommendation: avoid `Any` in new business logic without clear reason</li>
 </ul>
-
-<Footer slot="footer" />
 
 ---
 layout: two-cols-header
@@ -1217,8 +1134,6 @@ error:
   <li v-click>Practice note: this improves code navigation speed</li>
 </ul>
 
-<Footer slot="footer" />
-
 ---
 layout: center
 ---
@@ -1234,7 +1149,6 @@ A function should be more explicit about concrete return type than about accepte
   <li v-click>Practice note: explicit outputs reduce integration misunderstandings</li>
 </ul>
 
-<Footer slot="footer" />
 ---
 layout: center
 ---
@@ -1243,8 +1157,6 @@ layout: center
 
 Now map typing rules to our real project scaffold: `lib-demo`.
 
-<Footer slot="footer" />
-
 ---
 layout: center
 ---
@@ -1252,8 +1164,6 @@ layout: center
 # Live demo plan<MarkerX color="#D22B2B" title="live-demo" />
 
 Add one metric end-to-end: API payload -> typed entity -> metric function -> test -> `mypy`.
-
-<Footer slot="footer" />
 
 ---
 layout: two-cols-header
@@ -1277,8 +1187,6 @@ uv add --dev mypy
 uv run mypy src tests
 uv run pytest
 ```
-
-<Footer slot="footer" />
 
 ---
 layout: two-cols-header
@@ -1309,8 +1217,6 @@ def test_total_open_issues() -> None:
     assert total_open_issues(issues) == 2
 ```
 
-<Footer slot="footer" />
-
 ---
 layout: two-cols-header
 ---
@@ -1336,8 +1242,6 @@ warn_unused_ignores = true
   <li v-click>Fix root causes, avoid blanket <code># type: ignore</code></li>
 </ul>
 
-<Footer slot="footer" />
-
 ---
 layout: center
 ---
@@ -1351,8 +1255,6 @@ layout: center
   <li v-click>Goal: one fast tool instead of fragmented chains of utilities</li>
   <li v-click>Important in education: less setup overhead, more engineering time</li>
 </ul>
-
-<Footer slot="footer" />
 
 ---
 layout: two-cols-header
@@ -1381,8 +1283,6 @@ manual installs / setup.py
   <li v-click>Result: powerful stack, but high cognitive load for beginners</li>
   <li v-click>Team problem: everyone has different local setup ritual</li>
 </ul>
-
-<Footer slot="footer" />
 
 ---
 layout: two-cols-header
@@ -1431,8 +1331,6 @@ uv pip compile requirements.in -o requirements.txt
 uv pip sync requirements.txt
 ```
 
-<Footer slot="footer" />
-
 ---
 layout: center
 ---
@@ -1463,8 +1361,6 @@ uv run scripts/check_metrics.py
   <li v-click>Outcome: predictable onboarding and reproducible CI behavior</li>
 </ul>
 
-<Footer slot="footer" />
-
 ---
 layout: center
 ---
@@ -1477,8 +1373,6 @@ layout: center
   <li v-click>Add one typed metric with tests in your own branch</li>
   <li v-click>Run <code>mypy</code> and fix all reported errors</li>
 </ul>
-
-<Footer slot="footer" />
 
 ---
 layout: end
