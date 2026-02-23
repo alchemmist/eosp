@@ -14,9 +14,10 @@ description: "Эта статья-интенсив по тестированию
   покрытия помогут вам начать писать надёжный и поддерживаемый
   Python-код с тестами."
 tags:
-  - python
-  - testing
-  - eosp
+
+- python
+- testing
+- eosp
 extra:
   custom_props:
     time: "11:07"
@@ -24,7 +25,10 @@ extra:
     type: "synopsis"
     theme: "other"
     status: "finished"
+
 ---
+
+<!-- TODO: add knowledges about fixtures -->
 
 Эта статья-интенсив по тестированию на Python подробно объясняет,
 зачем нужны автотесты, какие виды тестов существуют, и как

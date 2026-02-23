@@ -14,7 +14,7 @@ sync:
 	bash scripts/sync-eosp.sh
 
 spell:
-	-cspell-cli "**/*.{md,tex}"
+	-yarn run cspell "**/*.{md,tex}"
 
 lint:
 	markdownlint-cli2 . --fix

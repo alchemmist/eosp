@@ -24,9 +24,9 @@ kanban-plugin: board
 - [ ] #homework Read longread about GitHub flow.
 - [ ] #homework Read longread about typed Python.
 - [ ] #lecture Why library is the core of the whole system. Library as lowest level interface.
-- [ ] #lecture What is typing? Why we need to use typeing? See the core of typing in Python
+- [ ] #lecture What is typing? Why we need to use typing? See the core of typing in Python.
+- [ ] #practice Students install the `uv`. And clone the repository.
 - [ ] #lecture Learning how to work with the uv package manager.
-- [ ] #practice Students install the `uv`. And clone the repostiroy
 - [ ] #lecture Review of `lib` repository structure and library design.
 - [ ] #live-demo Adding first metric end-to-end (API → logic → test)
 - [ ] #live-demo Try to install `mypy` as dev-dependence with `uv` and run on some examples.
@@ -39,35 +39,33 @@ kanban-plugin: board
 - [ ] #homework Read longread about typed Python. Play with code examples, try to run different type-checkers. And read slides from lecture.
 - [ ] #homework Optionally, open new issue.
 - [ ] #homework Register account on pypi.org.
-- [ ] #homework Close issue about personal data in `pyrpoject.toml`. Send pull requests.
-- [ ] #lecture Why testing is best way for up and hold code quality. The correct perception of testing: not privilege, base minimum. The image of protective wall.
-- [ ] #note Tell interesting thing: in Postgres, which we looked in previous lecture, count of unit testing limited and you can’t write a unit test if it not essential. This making for test checking passing fast.
-- [ ] #lecture How to write tests on Python? Test Driven Development
-- [ ] #practice Students at pairs try to solve issue and sent pull request
-	(*I’m reject it because this haven’t tests and we start to talk about testing*)
-- [ ] #note Show excerpt from the movie “home alone” like example of automated defense system
-- [ ] #practice Students adding tests to their pull requests. (*They can swap code writer in pair*)
-- [ ] #lecture Fast review of licenses in Open Source
+- [ ] #homework Close issue about personal data in `pyproject.toml`. Send pull requests.
+- [ ] #live-demo Together review pull request, which was sand from junior programmer. Find a mistakes.
+- [ ] #live-demo Together read PR with the same goal, but written more clean. Learn core of architecture.
+- [ ] #practice Students try to solve issue with `good-first-issue` mark and sent pull request. We take one of them and review together.
 - [ ] #note Announcement of next lecture
-- [ ] #note Use learn-go-with-tests course for preparing materials about testing
 
 
 ## Lecture 4
 
-- [ ] #homework Write a documentation for library at GitHub wiki
-- [ ] #homework Make pull request with `LICENSE` to our repose and justify why this type of license is suitable for us
+- [ ] #lecture Why testing is best way for up and hold code quality. The correct perception of testing: not privilege, base minimum. The image of protective wall.
+- [ ] #note Tell interesting thing: in Postgres, which we looked in previous lecture, count of unit testing limited and you can’t write a unit test if it not essential. This making for test checking passing fast.
+- [ ] #practice Students adding tests to pull requests, which they make as homework to today lecture.
+- [ ] #note Show excerpt from the movie “home alone” like example of automated defense system
+- [ ] #lecture How to write tests on Python? Test Driven Development
 - [ ] #lecture What is cli: commands, flags, exit codes. Difference between gui, tui and cli
+- [ ] #lecture Fast review of licenses in Open Source
 - [ ] #lecture Show examples of very popular cli
 - [ ] #lecture What is CI/CD and why it’s important for code quality
 - [ ] #live-demo Setup and trying CI/CD in `lib`
 - [ ] #live-demo How we build a new release of `lib` and publish it manually
+- [ ] #note Use learn-go-with-tests course for preparing materials about testing
 - [ ] #lecture How to make auto-deploy release of `lib`
 - [ ] #note Announcement of next lecture
 
 
 ## Lecture 5
 
-- [ ] #homework Add example usage of `lib` to wiki documentation
 - [ ] #lecture How to write honest and attractive `README`
 - [ ] #note Announcement of next lecture
 - [ ] #lecture How to write a cli with `click` python library
@@ -80,6 +78,9 @@ kanban-plugin: board
 
 ## Lecture 6
 
+- [ ] #homework Make pull request with `LICENSE` to our repose and justify why this type of license is suitable for us
+- [ ] #homework Add example usage of `lib` to wiki documentation
+- [ ] #homework Write a documentation for library at GitHub wiki
 - [ ] #lecture Where code lives vs where it runs
 - [ ] #lecture Fast intro to docker
 - [ ] #live-demo How to deploy `bot` manually
