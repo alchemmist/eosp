@@ -32,12 +32,12 @@ jobs:
           cache: yarn
 
       - name: Install root dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install
 
       - name: Install slidev dependencies
         run: |
           cd slides
-          yarn install --frozen-lockfile
+          yarn install
 
       - name: Install LaTeX
         run: |
