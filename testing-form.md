@@ -3,9 +3,7 @@
 ## Part 1. Short Answer Questions (12 items)
 
 ### Programming Languages
-
 Which languages have you worked with?  
-
 - [ ] Python  
 - [ ] JavaScript / TypeScript  
 - [ ] C / C++  
@@ -13,9 +11,7 @@ Which languages have you worked with?
 - [ ] Other (please specify)
 
 ### Your Python Experience
-
 Mark all the experiences you already have with Python:  
-
 - [ ] Never wrote Python code  
 - [ ] Wrote small scripts (automation, parsing, exercises)  
 - [ ] Created small educational or personal projects  
@@ -23,9 +19,7 @@ Mark all the experiences you already have with Python:
 - [ ] Developed complex solutions with architecture (packages, layers, CI/CD, documentation)  
 
 ### Your Python Knowledge
-
 Mark the areas of Python you have studied and can confidently use:  
-
 - [ ] Basic syntax (variables, primitives, collections, conditions, loops)  
 - [ ] Functions and functional programming (lambdas, recursion, map/filter/reduce, decorators, closures)  
 - [ ] OOP (classes, inheritance, polymorphism, interfaces)  
@@ -38,9 +32,7 @@ Mark the areas of Python you have studied and can confidently use:
 - [ ] Architectural approaches (layer separation, clean architecture, SOLID, design patterns)  
 
 ### Your Git / GitHub Skills
-
 Mark the functions of these tools you have used:  
-
 - [ ] Never used Git  
 - [ ] Repository initialization (git init, clone, add, commit, push)  
 - [ ] Branching (branch, checkout, merge, rebase)  
@@ -54,7 +46,6 @@ Mark the functions of these tools you have used:
 - [ ] Working with the GitHub API  
 
 ### API Experience
-
 - [ ] Don’t know what an API is  
 - [ ] Understand what it is, but haven’t used it practically  
 - [ ] Used third-party APIs, wrote requests (requests / fetch)  
@@ -62,7 +53,6 @@ Mark the functions of these tools you have used:
 - [ ] Worked with the GitHub API  
 
 ### Data Experience
-
 - [ ] Never worked with data  
 - [ ] Used pandas / numpy for datasets  
 - [ ] Used matplotlib / seaborn for plotting  
@@ -70,7 +60,6 @@ Mark the functions of these tools you have used:
 - [ ] Able to work with large datasets and analyze data  
 
 ### Linux / Console Experience
-
 - [ ] Never used  
 - [ ] Use Unix (Mac / Linux) as main OS  
 - [ ] Use WSL on Windows  
@@ -78,7 +67,6 @@ Mark the functions of these tools you have used:
 - [ ] Developed own CLI (e.g., argparse / typer / click)  
 
 ### Documentation Experience
-
 - [ ] No experience  
 - [ ] Wrote simple README.md files  
 - [ ] Used Markdown for project documentation in GitHub Wiki or /docs  
@@ -86,9 +74,7 @@ Mark the functions of these tools you have used:
 - [ ] Used automated documentation generation (Sphinx, pdoc)  
 
 ### Telegram Experience
-
 Check all that apply:  
-
 - [ ] Never created bots  
 - [ ] Made simple educational bots  
 - [ ] Used webhooks to interact with Telegram API  
@@ -101,7 +87,6 @@ Check all that apply:
 - [ ] Created complex bots with dialogs, media, and buttons  
 
 ### Development Environment
-
 - [ ] VS Code  
 - [ ] PyCharm or other JetBrains IDEs  
 - [ ] Vim / Neovim  
@@ -109,7 +94,6 @@ Check all that apply:
 - [ ] Other  
 
 ### Testing Experience
-
 - [ ] Don’t know what testing is  
 - [ ] Understand it, but haven’t written tests in real projects  
 - [ ] Regularly write unit tests (e.g., pytest, unittest)  
@@ -118,7 +102,6 @@ Check all that apply:
 - [ ] Use TDD methodology for writing tests  
 
 ### Teamwork Experience
-
 - [ ] No collaborative development experience  
 - [ ] Worked in a team as a “regular” developer  
 - [ ] Participated in group offline projects (hackathons, game jams)  
@@ -129,24 +112,20 @@ Check all that apply:
 
 ## Part 2. Open-Ended Questions (3 items)
 
-### 1. Describe the most challenging or interesting project you have coded
-
+### 1. Describe the most challenging or interesting project you have coded.
 Explain:  
-
 - What business problem it solved  
 - Your role in the project  
 - Technical difficulties you faced and how you overcame them  
 - If it was a team project, describe your contribution and how the collaboration was organized  
 
 Include as many links as possible:  
-
 - Source code on GitHub  
 - Project landing pages  
 - Certificates / awards (if submitted to competitions)  
 - Presentations, photos of development or defense, etc.  
 
 You can also include links to achievements that showcase you in a positive light:  
-
 - Interesting projects, hackathons, competitions, courses  
 - Certificates, publications (e.g., on Habr)  
 - Resume  
@@ -154,11 +133,9 @@ You can also include links to achievements that showcase you in a positive light
 ---
 
 ### 2. Developer Contribution Metrics
-
 Our project aims to evaluate developer contribution on GitHub, but simple commit counts or pull requests do not fully reflect real contribution.  
 
 Think about which indicators and metrics could help measure a developer’s activity and value. Examples:  
-
 - Number of bugs fixed  
 - Code quality and size  
 - Participation in reviews  
@@ -171,16 +148,13 @@ Describe which metrics you would propose, why, which aspects of developer work t
 ---
 
 ### 3. Project Architecture
-
 Imagine the architecture of our project:  
-
 - Core (library for calculating metrics)  
 - CLI utility  
 - Web API  
 - Telegram bot  
 
 Describe how you would split the code between these components:  
-
 - What belongs in the core  
 - What belongs in the interfaces  
 - How they interact with each other  

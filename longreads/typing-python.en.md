@@ -9,9 +9,8 @@ description: "This article covers two key questions.
   We will quickly go through the essential tools so that after reading,
   you can start writing typed Python consciously."
 tags:
-
-- python
-- eosp
+  - python
+  - eosp
 extra:
   custom_props:
     time: "16:02"
@@ -19,7 +18,6 @@ extra:
     type: "synopsis"
     theme: "other"
     status: "finished"
-
 ---
 
 This article covers two key questions. Why use typing in Python, a

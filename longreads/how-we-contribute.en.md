@@ -7,9 +7,8 @@ description: "This is a short beginner’s guide on how to work
 with open source. Here you can find a classic way to contribute
 to almost any project, as well as learn a few tips and hacks"
 tags:
-
-- open-source
-- eosp
+  - open-source
+  - eosp
 extra:
   custom_props:
     time: "12:21"
@@ -17,7 +16,6 @@ extra:
     type: "synopsis"
     theme: "other"
     status: "finished"
-
 ---
 
 This is a short beginner’s guide on how to work with open source

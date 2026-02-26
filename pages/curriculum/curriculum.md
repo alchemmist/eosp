@@ -48,24 +48,25 @@ kanban-plugin: board
 
 ## Lecture 4
 
+- [ ] #lecture Control-quality tools: linters, formatters, static chekers.
+- [ ] #lecture What is CI/CD and why it’s important for code quality
+- [ ] #lecture `Makefile` as entry point into repository and foundation of repository automation
+- [ ] #live-demo Setup and trying CI/CD in `lib`
+- [ ] #note Announcement of next lecture
+- [ ] #lecture `ruff` as linter + formatter + stylechecker. How to configure rules.
+
+
+## Lecture 5
+
+- [ ] #live-demo How we build a new release of `lib` and publish it manually
+- [ ] #lecture How to make auto-deploy release of `lib`
+- [ ] #lecture Fast review of licenses in Open Source
+- [ ] #lecture Show examples of very popular cli
 - [ ] #lecture Why testing is best way for up and hold code quality. The correct perception of testing: not privilege, base minimum. The image of protective wall.
 - [ ] #note Tell interesting thing: in Postgres, which we looked in previous lecture, count of unit testing limited and you can’t write a unit test if it not essential. This making for test checking passing fast.
 - [ ] #practice Students adding tests to pull requests, which they make as homework to today lecture.
 - [ ] #note Show excerpt from the movie “home alone” like example of automated defense system
 - [ ] #lecture How to write tests on Python? Test Driven Development
-- [ ] #lecture What is cli: commands, flags, exit codes. Difference between gui, tui and cli
-- [ ] #lecture Fast review of licenses in Open Source
-- [ ] #lecture Show examples of very popular cli
-- [ ] #lecture What is CI/CD and why it’s important for code quality
-- [ ] #live-demo Setup and trying CI/CD in `lib`
-- [ ] #live-demo How we build a new release of `lib` and publish it manually
-- [ ] #note Use learn-go-with-tests course for preparing materials about testing
-- [ ] #lecture How to make auto-deploy release of `lib`
-- [ ] #note Announcement of next lecture
-
-
-## Lecture 5
-
 - [ ] #lecture How to write honest and attractive `README`
 - [ ] #note Announcement of next lecture
 - [ ] #lecture How to write a cli with `click` python library
@@ -74,6 +75,7 @@ kanban-plugin: board
 - [ ] #lecture How do we hide secrets from visitors to our repository and hackers
 - [ ] #lecture Review of `cli` repository structure
 - [ ] #live-demo Setup auto deploy on release of `cli`
+- [ ] #note Use learn-go-with-tests course for preparing materials about testing
 
 
 ## Lecture 6
@@ -81,6 +83,7 @@ kanban-plugin: board
 - [ ] #homework Make pull request with `LICENSE` to our repose and justify why this type of license is suitable for us
 - [ ] #homework Add example usage of `lib` to wiki documentation
 - [ ] #homework Write a documentation for library at GitHub wiki
+- [ ] #lecture What is cli: commands, flags, exit codes. Difference between gui, tui and cli
 - [ ] #lecture Where code lives vs where it runs
 - [ ] #lecture Fast intro to docker
 - [ ] #live-demo How to deploy `bot` manually
@@ -111,7 +114,6 @@ kanban-plugin: board
 ## Additionally
 
 - [ ] #homework Make a templates for issues in repo. For new contributors
-- [ ] #lecture `Makefile` as entry point into repository and foundation of repository automation
 - [ ] #lecture Introduction to Asynchronous Programming in Python
 - [ ] #note Create `CONTRIBUTING.md` guide
 - [ ] #note Create `CODE_OF_CONDUCT.md` guide

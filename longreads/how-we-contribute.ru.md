@@ -8,9 +8,8 @@ description: "Это краткое руководство для начинаю
 классический способ внести свой вклад почти в любой проект. А так
 же узнать несколько советов и хаков."
 tags:
-
-- open-source
-- eosp
+  - open-source
+  - eosp
 extra:
   custom_props:
     time: "21:25"
@@ -18,7 +17,6 @@ extra:
     type: "synopsis"
     theme: "other"
     status: "finished"
-
 ---
 
 Это краткое руководство для начинающих, о том, как работать
