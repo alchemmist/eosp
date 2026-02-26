@@ -714,7 +714,7 @@ def export(repo: UserRepo) -> list[str]:
 export(SqliteRepo()) # no problems
 ```
 
-```python {2|2|2}
+```python {2|2|2|all}
 from collections.abc import Iterable
 
 class UserRepo():
@@ -741,7 +741,7 @@ export(SqliteRepo()) # no problems
 <div v-click="7">
 
 ````md magic-move {at:8, lines:true}
-```python {1,3|7|13-16}
+```python {1,3|7|13-16|all}
 from typing import Protocol
 
 class UserRepo(Protocol):
