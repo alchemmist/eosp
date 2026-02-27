@@ -493,6 +493,27 @@
   dependencies:
     "@iconify/types" "*"
 
+"@iconify-json/tabler@^1.2.27":
+  version "1.2.27"
+  resolved "https://registry.yarnpkg.com/@iconify-json/tabler/-/tabler-1.2.27.tgz#f9b2e632807f27bfe381abcf1e7b452a5b15a0da"
+  integrity sha512-ZpPD83YxRepw0uxEbDNJqRlSFRiek9TPaKvQ/62FrqfyCmgPidR3Q9uM5Mzb1miQC36BlLFhmadoKtpzQkoAUQ==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify-json/uil@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@iconify-json/uil/-/uil-1.2.3.tgz#d455746fe32491fa46a884b6d47e4b7a3cc9c76f"
+  integrity sha512-if91+UBhDQc6glPsIaXecGIcXnbQZfEO4Gdv89TV2xQ+V5e9GWbY5rNl2fsKZd8COsRQ5lRQAKimVQVL0CZZVg==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify-json/vscode-icons@^1.2.44":
+  version "1.2.44"
+  resolved "https://registry.yarnpkg.com/@iconify-json/vscode-icons/-/vscode-icons-1.2.44.tgz#4ce820e701acb3955a2cd86ce3f7bb94a967e9dc"
+  integrity sha512-3fLOIRRtsm6HD6UPJ3Y6/UztqxNTYgKA8VxrWeg1C+042MD3A/06CkWSsii1pz/f1zl0+YxvCHIVM3tXUlho+A==
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify/types@*", "@iconify/types@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@iconify/types/-/types-2.0.0.tgz#ab0e9ea681d6c8a1214f30cd741fe3a20cc57f57"
@@ -4261,10 +4282,10 @@ slidev-addon-fancy-arrow@^0.16.0:
     roughjs "^4.6.6"
     vue "^3.5.22"
 
-slidev-theme-alchemmist@^0.1.16:
-  version "0.1.16"
-  resolved "https://registry.yarnpkg.com/slidev-theme-alchemmist/-/slidev-theme-alchemmist-0.1.16.tgz#57fda2c53123edcaddd1e0e1ace24703c406a45c"
-  integrity sha512-gCN+yRMjPB9mTyHcJmTf7Igp7zjYpqHwlqMcRhflYo9B2BxrordQ9uUNUYd1LrwV0uq4mNE6jmOEZItJr3HnWQ==
+slidev-theme-alchemmist@^0.1.20:
+  version "0.1.20"
+  resolved "https://registry.yarnpkg.com/slidev-theme-alchemmist/-/slidev-theme-alchemmist-0.1.20.tgz#f5d4b8019a1f998177abf85c3d1f7a216294295f"
+  integrity sha512-ylGvrRL8m2Vo2/nYa46hnPETtiW4uB27V2wLwDaDLP3p+B40/l3og42KqIPKgyUWub+UN1DZum/FfXWug0COwA==
   dependencies:
     codemirror-theme-vars "^0.1.2"
     prism-theme-vars "^0.2.5"

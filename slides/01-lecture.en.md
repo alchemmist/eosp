@@ -321,6 +321,12 @@ Any tool that can send HTTP requests can work with GitHub API.
 layout: two-cols-header
 ---
 
+<style scoped>
+:deep(.two-cols-header) {
+    grid-template-columns: 0.65fr 1fr;
+}
+</style>
+
 # Official `gh` cli<MarkerX color="#5d3fd3" title="api" />
 
 The cli utility for using all github functionality from terminal.
@@ -328,22 +334,43 @@ The cli utility for using all github functionality from terminal.
 ::left::
 
 <div v-click>
+
 Install into your shell:
 
-```sh
-# Mac:
-brew install gh
+::code-group
 
-# Windows:
-winget install --id GitHub.cli
-
-# Arch:
+```sh [Arch ~i-logos:archlinux w-9.1 h-9.1~]
 sudo pacman -S github-cli
+```
+
+```sh [Ubuntu ~i-logos:ubuntu~]
+(type -p wget >/dev/null || (sudo apt update && sudo apt install wget -y)) && sudo mkdir -p -m 755 /etc/apt/keyrings && out=$(mktemp) && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg && cat $out | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null && sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg && sudo mkdir -p -m 755 /etc/apt/sources.list.d && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null && sudo apt update && sudo apt install gh -y
+```
+
+```sh [Mac ~i-streamline-logos:apple-logo-solid~]
+brew install gh
+```
+
+```sh [Windows ~i-devicon:windows8~]
+winget install --id GitHub.cli
+```
+
+::
+
+</div>
+
+<div v-click>
+
+You need to authorize if you want to work with your account:
+
+```sh
+gh auth
 ```
 
 </div>
 
 <div v-click>
+
 And try something, for example:
 
 ```sh
@@ -354,11 +381,12 @@ gh api /users/alchemmist
 
 ::right::
 
-<div v-click="3">
+<div v-click="4">
+
 As result:
 
 ````md magic-move {lines: true}
-```json {*|3|5|9-12|13|14-15|*}
+```json {|all|3|5|9-12|13|14-15|all}
 {
   "login": "alchemmist",
   "avatar_url": "https://avatars.githubusercontent.com/u/104511335?v=4",
@@ -770,4 +798,3 @@ layout: center
 
 ---
 layout: end
----

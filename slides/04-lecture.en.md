@@ -11,13 +11,14 @@ drawings:
 duration: 95min
 date: February 26th, 2026
 remoteAssets: false
-layout: intro
 themeConfig:
   paginationX: r
   paginationY: t
-  paginationPagesDisabled: [1]
   footerComponent: Footer
-  footerPagesDisabled: [1, 3, 5, 6, 8, 18]
+
+layout: intro
+footer: false
+pagination: false
 ---
 
 # Code quality in the repository
@@ -50,6 +51,7 @@ layout: center
 
 ---
 layout: full
+footer: false
 ---
 
 # What is style?<MarkerX color="#0096FF" title="style" />
@@ -74,6 +76,7 @@ layout: center
 
 ---
 layout: full
+footer: false
 ---
 
 # [`cqfn/aibolit`](https://github.com/cqfn/aibolit)<MarkerX color="#0096FF" title="style" />
@@ -82,6 +85,7 @@ layout: full
 
 ---
 layout: full
+footer: false
 ---
 
 # Painstacking work or magic?<MarkerX color="#0096FF" title="style" />
@@ -105,6 +109,7 @@ layout: center
 
 ---
 layout: full
+footer: false
 ---
 
 # [<span class="mono-text">Ruff</span>](https://docs.astral.sh/ruff/)<MarkerX color="#0096FF" title="style" />
@@ -126,18 +131,20 @@ layout: center
 </ul>
 
 ---
-layout: two-cols
+layout: two-cols-header
 gap: 15px
 ---
 
 # Ruff in action
 
+::left::
+
 <div v-click>
 
-````md magic-move {lines:true, duration:300, at:1}
-```python{all|all|all} [main.py]
-import os,sys,math,random
+````md magic-move [main.py] {lines:true, at:1}
+```python {all|all|all}
 
+import os,sys,math,random
 
 
 
@@ -156,7 +163,8 @@ print(
     'Sum is '+str(calc_sum(x,y)))
 print(math.pi,random.randint(1,100))
 ```
-```python{all} [main.py]
+
+```python {all}
 import os, sys, math, random
 
 
@@ -165,8 +173,6 @@ def calc_sum(a, b=[]):
     for i in a:
         if i == None:
             pass
-        elif type(i) == int:
-            total += i
         else:
             total += int(i)
     if b:
@@ -189,22 +195,30 @@ print(math.pi, random.randint(1, 100))
 
 We can check format of this file with:
 
-````md magic-move {duration:300, at:3}
+````md magic-move [~i-no:icon~ $ uv run ruff format --check main.py] {at:2}
 ```sh
-uv run ruff format --check main.py
+
 ```
+
 ```sh
-uv run ruff format main.py
+Would reformat: main.py
+1 file would be reformatted
 ```
 ````
 
-````md magic-move {duration:300, at:3}
-```plaintext{all}
-> Would reformat: main.py
-> 1 file would be reformatted
+</div>
+
+<div v-click>
+
+And format it autmatically:
+
+````md magic-move [~i-no:icon~ $ uv run ruff format --check main.py] {at:3}
+```sh
+
 ```
-```plaintext{all}
-> 1 file reformatted
+
+```sh [~i-no:icon~ $ uv run ruff format main.py]
+1 file reformatted
 ```
 ````
 
@@ -214,16 +228,38 @@ uv run ruff format main.py
 layout: center
 ---
 
-# Example formatter output<MarkerX color="#0096FF" title="style" />
+# Running on project<MarkerX color="#0096FF" title="style" />
 
-```bash
-$ uv run ruff format .
-2 files reformatted, 37 files left unchanged
+<div v-click>
 
-$ uv run ruff format . --check
-Would reformat: src/lib_demo/report.py
-1 file would be reformatted, 38 files already formatted
+````md magic-move [~i-no:icon~ $ uv run ruff format . --check] {at:1}
+```sh
+
 ```
+
+```sh
+Would reformat: src/lib_demo/report.py
+12 files would be reformatted, 38 files already formatted
+```
+````
+
+</div>
+
+<div v-click>
+
+<br>
+
+````md magic-move [~i-no:icon~ $ uv run ruff format .] {at:2}
+```sh
+
+```
+
+```sh
+12 files reformatted, 37 files left unchanged
+```
+````
+
+</div>
 
 ---
 layout: two-cols-header
@@ -233,9 +269,7 @@ layout: two-cols-header
 
 ::left::
 
-`pyproject.toml`:
-
-```toml
+```toml [pyproject.toml ~i-carbon:document-configuration~]
 [tool.ruff]
 line-length = 88
 target-version = "py312"
@@ -248,7 +282,7 @@ line-ending = "auto"
 
 ::right::
 
-Setup tool by `uv`:
+Install `uv` as devdependency:
 
 ```bash
 uv add --dev ruff
@@ -311,13 +345,136 @@ layout: center
 layout: two-cols-header
 ---
 
+# Ruff in action again!<MarkerX color="#50C878" title="lint" />
+
+::left::
+
+<div v-click>
+
+````md magic-move [main.py] {lines:true, at:5}
+```python {all}
+import os, sys, math, random
+
+
+def calc_sum(a, b=[]):
+    total = 0
+    for i in a:
+        if i == None:
+            pass
+        else:
+            total += int(i)
+    if b:
+        total += sum(b)
+    return total
+
+
+x = [1, "2", None, 3]
+y = [10, 20]
+print("Sum is " + str(calc_sum(x, y)))
+print(math.pi, random.randint(1, 100))
+```
+
+```python
+import math
+import random
+
+
+def calc_sum(a, b=[]):
+    total = 0
+    for i in a:
+        if i == None:
+            pass
+        else:
+            total += int(i)
+    if b:
+        total += sum(b)
+    return total
+
+
+x = [1, "2", None, 3]
+y = [10, 20]
+print("Sum is " + str(calc_sum(x, y)))
+print(math.pi, random.randint(1, 100))
+```
+````
+
+</div>
+
+::right::
+
+<style scoped>
+:deep(p) { margin: 0.5rem; }
+</style>
+
+<div v-click>
+
+Run checks on your code:
+
+````md magic-move [$ uv run ruff check main.py ~i-no:icon~] {at:2}
+```sh
+
+```
+
+```sh
+main.py:1:1: E401 [*] Multiple imports on one line
+  |
+1 | import os, sys, math, random
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ E401
+  |
+  = help: Split imports
+```
+
+```sh
+main.py:1:8: F401 [*] `os` imported but unused
+  |
+1 | import os, sys, math, random
+  |        ^^ F401
+  |
+  = help: Remove unused import
+```
+
+```sh
+main.py:7:17: E711 Comparison to `None` should be `cond is None`
+  |
+5 |     total = 0
+6 |     for i in a:
+7 |         if i == None:
+  |                 ^^^^ E711
+8 |             pass
+9 |         elif type(i) == int:
+  |
+  = help: Replace with `cond is None`
+```
+````
+
+</div>
+
+<div v-click="5">
+
+Try to fix someone:
+
+````md magic-move [$ uv run ruff check main.py --fix ~i-no:icon~] {at:5}
+```sh
+
+```
+
+```sh
+Found 4 errors (3 fixed, 1 remaining).
+No fixes available (1 hidden fix can be enabled with the `--unsafe-fixes` option).
+```
+````
+
+</div>
+
+---
+layout: two-cols-header
+---
+
 # Configure Ruff linter<MarkerX color="#50C878" title="lint" />
 
 ::left::
 
-`pyproject.toml`:
-
-```toml
+```toml [pyproject.toml ~i-carbon:document-configuration~]
 [tool.ruff.lint]
 select = ["ALL"]
 ignore = ["D203", "D212", "COM812", "PLR0913"]
@@ -330,7 +487,7 @@ ignore = ["D203", "D212", "COM812", "PLR0913"]
 
 Install and run:
 
-```bash
+```sh
 uv add --dev ruff
 uv run ruff check .
 uv run ruff check . --fix
@@ -338,11 +495,12 @@ uv run ruff check . --fix
 
 With formatter in one flow:
 
-````md magic-move {lines:true, duration:300}
+````md magic-move {duration:300}
 ```bash
 uv run ruff check . --fix
 uv run ruff format .
 ```
+
 ```bash
 uv run ruff check . --fix --unsafe-fixes
 uv run ruff format .
@@ -350,35 +508,8 @@ uv run ruff format .
 ````
 
 ---
-layout: center
----
-
-# Example linter output<MarkerX color="#50C878" title="lint" />
-
-```bash
-$ ruff check main.py
-main.py:1:1: E401 [*] Multiple imports on one line
-  |
-1 | import os, sys, math, random
-  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ E401
-  |
-  = help: Split imports
-
-main.py:7:17: E711 Comparison to `None` should be `cond is None`
-  |
-5 |     total = 0
-6 |     for i in a:
-7 |         if i == None:
-  |                 ^^^^ E711
-8 |             pass
-9 |         elif type(i) == int:
-  |
-  = help: Replace with `cond is None`
-
-```
-
----
 layout: full
+footer: false
 ---
 
 # Let's see new [pull reqeust](https://github.com/contriboo/contriboo-lib/pull/39)<MarkerX color="#D22B2B" title="live-demo" />
@@ -529,16 +660,16 @@ layout: center
 
 # Make targets map (short)<MarkerX color="#5D3FD3" title="make" />
 
-| **Use case** | **Targets** |
-| ------------ | ----------- |
-| Main quality gate | `check` |
-| Style and lint | `format`, `format-check`, `lint` |
-| Typing | `types` |
-| Tests | `test`, `test-cov` |
-| Security | `security` |
-| Setup | `venv`, `requirements` |
-| Hooks | `pre-commit`, `pre-commit-install`, `pre-commit-uninstall` |
-| Utility | `clean`, `help` |
+| **Use case**      | **Targets**                                                |
+| ----------------- | ---------------------------------------------------------- |
+| Main quality gate | `check`                                                    |
+| Style and lint    | `format`, `format-check`, `lint`                           |
+| Typing            | `types`                                                    |
+| Tests             | `test`, `test-cov`                                         |
+| Security          | `security`                                                 |
+| Setup             | `venv`, `requirements`                                     |
+| Hooks             | `pre-commit`, `pre-commit-install`, `pre-commit-uninstall` |
+| Utility           | `clean`, `help`                                            |
 
 ---
 layout: center
@@ -719,4 +850,5 @@ layout: center
 
 ---
 layout: end
+footer: false
 ---

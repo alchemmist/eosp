@@ -769,4 +769,3 @@ layout: center
 
 ---
 layout: end
----

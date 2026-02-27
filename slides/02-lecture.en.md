@@ -15,7 +15,7 @@ layout: intro
 themeConfig:
   paginationX: r
   paginationY: t
-  paginationPagesDisabled: [1, 4, 5, 6, 7]
+  paginationPagesDisabled: [1, 4, 6, 7, 8]
   footerComponent: Footer
   footerPagesDisabled: [1]
 ---
@@ -58,35 +58,16 @@ From low-level primitives to user-facing products.
 
 ::left::
 
-<div v-click="1" style="width: 170px;">
+<div v-click style="width: 150px;">
 
 ```mermaid
 flowchart TD
-    LIB[Library API] --> SDK[SDK / Framework]
-    LIB --> SDK
-    LIB --> SDK
-    SDK --> APP[Application / Service]
-    SDK --> APP
-    SDK --> APP
-    SDK --> APP
-    APP --> UI[CLI / GUI / Bot / Web]
-    APP --> UI
-    APP --> UI
-    APP --> UI
-    APP --> UI
-    APP --> UI
-    UI --> USER[End user]
-    UI --> USER
-    UI --> USER
-    UI --> USER
-    UI --> USER
-    UI --> USER
-    UI --> USER
-    UI --> USER
-    UI --> USER
+    LIB["Library API  #nbsp;"] --> SDK["SDK/Framework   #nbsp;"]
+    SDK --> APP["Service 󰲌 #nbsp;"]
+    APP --> UI["GUI/Bot/Web   #nbsp;"]
+    UI --> USER["End user  #nbsp;"]
 
-    classDef core fill:#d9f2ff,stroke:#0096FF,color:#0b2e4f;
-    class LIB core
+    style LIB fill:#d9f2ff,stroke:#0096FF,color:#0b2e4f;
 ```
 
 </div>
@@ -94,23 +75,23 @@ flowchart TD
 ::right::
 
 <ul>
-  <li v-click="2">Library it's a lowest interface.</li>
-  <li v-click="2">Library defines stable primitives and contracts.</li>
-  <li v-click="3">Upper layers can change without rewriting the core.</li>
-  <li v-click="4">The lower the layer, the wider the potential reuse.</li>
-  <li v-click="5">Backward compatibility pressure is highest at this layer.</li>
+  <li v-click>Library it's a lowest interface.</li>
+  <li v-click>Library defines stable primitives and contracts.</li>
+  <li v-click>Upper layers can change without rewriting the core.</li>
+  <li v-click>The lower the layer, the wider the potential reuse.</li>
+  <li v-click>Backward compatibility pressure is highest at this layer.</li>
 </ul>
 
 ---
 
 # Most popular examples<MarkerX color="#0096FF" title="lib" />
 
-| **Library** | **What it is**                                                                                                                                                                 |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `libc`      | Standard C runtime library.<br> Present in almost every C/Unix program via core primitives (`printf`, `malloc`, `memcpy`).<br> Stable contracts underpin entire OS ecosystems. |
-| `OpenSSL`   | Cryptography and TLS implementation library.<br> Used by browsers, curl, git, Python requests.<br> Security fixes or bugs immediately affect huge parts of the internet.       |
-| `zlib`      | General-purpose compression library.<br> Powers gzip/deflate in HTTP, ZIP archives, PNG files.<br> Small API, massive invisible reach.                                         |
-| `SQLite`    | Embedded relational database engine.<br> Shipped inside browsers, mobile apps, IDEs.<br> Adoption spreads through embedding, not direct usage.                                 |
+| **Library**                        | **What it is**                                                                                                                                                                                          |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <span v-click="1">`libc`</span>    | <span v-click="1">Standard C runtime library.<br> Present in almost every C/Unix program via core primitives (`printf`, `malloc`, `memcpy`).<br> Stable contracts underpin entire OS ecosystems.</span> |
+| <span v-click="2">`OpenSSL`</span> | <span v-click="2">Cryptography and TLS implementation library.<br> Used by browsers, curl, git, Python requests.<br> Security fixes or bugs immediately affect huge parts of the internet.</span>       |
+| <span v-click="3">`zlib`</span>    | <span v-click="3">General-purpose compression library.<br> Powers gzip/deflate in HTTP, ZIP archives, PNG files.<br> Small API, massive invisible reach.</span>                                         |
+| <span v-click="4">`SQLite`</span>  | <span v-click="4">Embedded relational database engine.<br> Shipped inside browsers, mobile apps, IDEs.<br> Adoption spreads through embedding, not direct usage.</span>                                 |
 
 ---
 layout: two-cols-header
@@ -127,8 +108,21 @@ The adoption funnel expands through integrations.
 ```mermaid
 flowchart TD
     L[1 library] --> F[50 frameworks / SDKs]
+    L --> F
+    L --> F
     F --> A[5000 apps / services]
+    F --> A
+    F --> A
+    F --> A
+    F --> A
     A --> U[Millions of users]
+    A --> U
+    A --> U
+    A --> U
+    A --> U
+    A --> U
+    A --> U
+    A --> U
 ```
 
 </div>
@@ -242,7 +236,7 @@ layout: center
 ```mermaid
 flowchart LR
     %% Levels
-    A[IDE] --> B[Tests] --> C[Checkers] --> D[CI] --> E[Code Review] --> F[QA] --> G[End users]
+    A["IDE #nbsp;"] --> B["Tests 󰙨#nbsp;"] --> C["Checkers #nbsp;"] --> D["CI #nbsp;"] --> E["Review #nbsp;"] --> F["Testers #nbsp;"] --> G["Users #nbsp;"]
 
     %% Coloring gradient from green to red
     classDef ide fill:#a8e6a3,stroke:#4caf50,stroke-width:2px;
@@ -294,25 +288,17 @@ layout: center
 layout: two-cols-header
 ---
 
-<!-- <style scoped> -->
-<!-- :deep(h1) { -->
-<!--   margin-top: 100px; -->
-<!-- } -->
-<!-- </style> -->
-
 # Primitive annotations<MarkerX color="#50C878" title="typing" />
 
 Start from boundary functions where wrong types enter the system.
 
 ::left::
 
-```python
-from decimal import Decimal
-
-def compute_fee(amount: Decimal, fee_rate: float) -> Decimal:
+```python [main.py] {all|3-4} {lines:true}
+def compute_fee(amount: float, fee_rate: float) -> float:
     if fee_rate < 0:
         raise ValueError("fee_rate must be non-negative")
-    return amount * Decimal(str(fee_rate))
+    return amount * float(str(fee_rate))
 ```
 
 ::right::
@@ -1376,4 +1362,3 @@ layout: center
 
 ---
 layout: end
----
