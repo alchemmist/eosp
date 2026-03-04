@@ -1,0 +1,15 @@
+---
+tech_name: "silence-of-kittens"
+title: "Молчание котят"
+date: 2026-03-04
+language: ru
+description: "Немного рассуждений о подходе разработчиков к своей работе. "
+topics: 
+  - eosp
+  - it
+extra: 
+  custom_props:
+     public: true
+     type: essay
+---
+
