@@ -108,7 +108,7 @@ kanban-plugin: board
 - [ ] #idea Asking Mari about more time at last lecture or about  informal format for making retro and celebrate
 
 
-## 👻 Lecture 9
+## 🌵 Lecture 9
 
 - [ ] #lecture How to make a releases and versioning you product: https://semver.org/
 - [ ] #live-demo How we build a new release of `lib` and publish it manually
@@ -116,7 +116,7 @@ kanban-plugin: board
 - [ ] #lecture How to be open for new contributors.
 
 
-## 👻 Lecture 10
+## 🌵 Lecture 10
 
 - [ ] #homework Create `CODE_OF_CONDUCT.md` guide
 - [ ] #homework  Write an `CONTRIBUTING.md` guide
@@ -128,7 +128,7 @@ kanban-plugin: board
 - [ ] #live-demo Setup auto deploy on release of `cli`
 
 
-## 👻  Lecture 11
+## 🌵 Lecture 11
 
 - [ ] #live-demo How to deploy `bot` manually
 - [ ] #lecture How telegram bots works in general
@@ -139,13 +139,13 @@ kanban-plugin: board
 - [ ] #lecture Introduction to Asynchronous Programming in Python
 
 
-## 👻 Lecture 12
+## 🌵 Lecture 12
 
 - [ ] #lecture Fast intro to docker
 - [ ] #lecture Review of `bot` repository structure
 
 
-## 👻 Lecture 13
+## 🌵 Lecture 13
 
 - [ ] #homework Make a pretty landing for the whole project.
 
