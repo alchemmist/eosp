@@ -465,6 +465,13 @@
   dependencies:
     "@iconify/types" "*"
 
+"@iconify-json/devicon@^1.2.59":
+  version "1.2.59"
+  resolved "https://registry.yarnpkg.com/@iconify-json/devicon/-/devicon-1.2.59.tgz#e33442dca9da33be851c0b9756b38711dd6c0117"
+  integrity sha512-OBa/V8rB3zyDmT0W+XAdF/20ErDIL8hxwtPjxv6fRKkokqdWhfTJiRXtS6YZXp8M03scjT+uugd7jonIgfbnfg==
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify-json/mdi@^1.2.3":
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@iconify-json/mdi/-/mdi-1.2.3.tgz#5e4ee9d8c8aaad04381c8cc6c6edbe3327f031b5"
@@ -486,6 +493,13 @@
   dependencies:
     "@iconify/types" "*"
 
+"@iconify-json/streamline-logos@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@iconify-json/streamline-logos/-/streamline-logos-1.2.0.tgz#8264a916272573d73770ecaa26397623c96ca28b"
+  integrity sha512-eEMC8BvJTCUiR/xdAjKuJwRGnKV5v9Prp2wgONFLKILq1om/5Pz+EUsFXVqYSVeIAUfguaB2tjy1wM7wJbs0IQ==
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify-json/svg-spinners@^1.2.4":
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/@iconify-json/svg-spinners/-/svg-spinners-1.2.4.tgz#e142f5aa6b36c5b6d99dfe88ef0772bb5c99c4e6"
@@ -494,9 +508,9 @@
     "@iconify/types" "*"
 
 "@iconify-json/tabler@^1.2.27":
-  version "1.2.27"
-  resolved "https://registry.yarnpkg.com/@iconify-json/tabler/-/tabler-1.2.27.tgz#f9b2e632807f27bfe381abcf1e7b452a5b15a0da"
-  integrity sha512-ZpPD83YxRepw0uxEbDNJqRlSFRiek9TPaKvQ/62FrqfyCmgPidR3Q9uM5Mzb1miQC36BlLFhmadoKtpzQkoAUQ==
+  version "1.2.30"
+  resolved "https://registry.yarnpkg.com/@iconify-json/tabler/-/tabler-1.2.30.tgz#e1fa8ae65733151da6e6775b974870e6bf5beb2d"
+  integrity sha512-fhy+uBj3zwRpwWIKLc5qAaS9GB4XPvLW9/WhKqGbjNpNQeAnkcM3i3B5kylOmqlUmWwO0Pq/7qyiKqFmLyE73w==
   dependencies:
     "@iconify/types" "*"
 
@@ -4282,11 +4296,18 @@ slidev-addon-fancy-arrow@^0.16.0:
     roughjs "^4.6.6"
     vue "^3.5.22"
 
-slidev-theme-alchemmist@^0.1.20:
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/slidev-theme-alchemmist/-/slidev-theme-alchemmist-0.1.20.tgz#f5d4b8019a1f998177abf85c3d1f7a216294295f"
-  integrity sha512-ylGvrRL8m2Vo2/nYa46hnPETtiW4uB27V2wLwDaDLP3p+B40/l3og42KqIPKgyUWub+UN1DZum/FfXWug0COwA==
+slidev-theme-alchemmist@^0.1.22:
+  version "0.1.22"
+  resolved "https://registry.yarnpkg.com/slidev-theme-alchemmist/-/slidev-theme-alchemmist-0.1.22.tgz#46a63232551cd8231ac45b1accb020e03d1be4de"
+  integrity sha512-ti98KrbCFY065MPw74pV2onE3NOC0BYXJBYkJtJzmOZJRd9dX4NMlLTxIhldSmzCGQdsABOzr/cLDb3PhurS5Q==
   dependencies:
+    "@iconify-json/carbon" "^1.2.18"
+    "@iconify-json/devicon" "^1.2.59"
+    "@iconify-json/mdi" "^1.2.3"
+    "@iconify-json/streamline-logos" "^1.2.0"
+    "@iconify-json/tabler" "^1.2.27"
+    "@iconify-json/uil" "^1.2.3"
+    "@iconify-json/vscode-icons" "^1.2.44"
     codemirror-theme-vars "^0.1.2"
     prism-theme-vars "^0.2.5"
 
