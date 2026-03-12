@@ -74,7 +74,6 @@ kanban-plugin: board
 ## Lecture 6
 
 - [ ] #homework Closing and creating issues.
-- [ ] #homework Make pull request with `LICENSE` to our repose and justify why this type of license is suitable for us
 - [ ] #lecture How to write honest and attractive `README`
 - [ ] #lecture Why testing is best way for up and hold code quality. The correct perception of testing: not privilege, base minimum. The image of protective wall.
 - [ ] #note Show excerpt from the movie “home alone” like example of automated defense system
@@ -89,6 +88,8 @@ kanban-plugin: board
 ## Lecture 7
 
 - [ ] #homework Closing and creating issues.
+- [ ] #homework Prepare a draft of pitching.
+- [ ] #homework Make pull request with `LICENSE` to our repose and justify why this type of license is suitable for us
 - [ ] #homework Write a `README.md` using recommendations from previous lecture and article
 - [ ] #lecture Hacks about how to make a good slide deck
 - [ ] #lecture Hacks about how to make a good pitching
@@ -98,7 +99,6 @@ kanban-plugin: board
 
 ## Lecture 8
 
-- [ ] #homework Prepare a pitching
 - [ ] #homework Prepare a slide deck
 - [ ] #homework Create demo video/screencast
 - [ ] #homework Write a documentation for library at GitHub wiki
