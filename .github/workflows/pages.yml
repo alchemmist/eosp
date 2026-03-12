@@ -37,7 +37,7 @@ jobs:
       - name: Install slidev dependencies
         run: |
           cd slides
-          yarn install
+          yarn install --no-lockfile
 
       - name: Install LaTeX
         run: |
