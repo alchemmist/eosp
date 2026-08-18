@@ -522,15 +522,15 @@
     "@iconify/types" "*"
 
 "@iconify-json/vscode-icons@^1.2.44":
-  version "1.2.44"
-  resolved "https://registry.npmjs.org/@iconify-json/vscode-icons/-/vscode-icons-1.2.44.tgz"
-  integrity sha512-3fLOIRRtsm6HD6UPJ3Y6/UztqxNTYgKA8VxrWeg1C+042MD3A/06CkWSsii1pz/f1zl0+YxvCHIVM3tXUlho+A==
+  version "1.2.74"
+  resolved "https://registry.yarnpkg.com/@iconify-json/vscode-icons/-/vscode-icons-1.2.74.tgz#6ff1d5aed47545949c9c2f38cb6b7d01e5bb7848"
+  integrity sha512-ZVf1IM5sOvvY+0Gc6jtuD5okkd51mJe/BoVMhWJCu1WqZLSF6XgbSguxUOyuBmMjJXNPSw1OBvPwEVq1bXfiTw==
   dependencies:
     "@iconify/types" "*"
 
 "@iconify/types@*", "@iconify/types@^2.0.0":
   version "2.0.0"
-  resolved "https://registry.npmjs.org/@iconify/types/-/types-2.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/@iconify/types/-/types-2.0.0.tgz#ab0e9ea681d6c8a1214f30cd741fe3a20cc57f57"
   integrity sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==
 
 "@iconify/utils@^3.0.1", "@iconify/utils@^3.1.0":
