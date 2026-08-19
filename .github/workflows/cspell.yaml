@@ -21,7 +21,7 @@ jobs:
           treat_flagged_words_as_errors: false
           suggestions: true
           strict: true
-          incremental_files_only: false
+          incremental_files_only: true
           config: "cspell.config.yaml"
           verbose: false
           use_cspell_files: false
