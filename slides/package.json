@@ -2,6 +2,10 @@
   "name": "eosp-course-2026",
   "type": "module",
   "private": true,
+  "packageManager": "pnpm@11.22.0",
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open",
@@ -14,25 +18,25 @@
     "@iconify-json/uil": "^1.2.3",
     "@iconify-json/vscode-icons": "^1.2.44",
     "@iconify/vue": "^5.0.0",
-    "@slidev/cli": "^52.11.3",
+    "@slidev/cli": "^52.19.1",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
     "codemirror-theme-vars": "^0.1.2",
     "prism-theme-vars": "^0.2.5",
     "slidev-addon-fancy-arrow": "^0.16.0",
-    "slidev-theme-alchemmist": "^0.1.22",
+    "slidev-theme-alchemmist": "^0.3.0",
     "vue": "^3.5.27"
   },
   "devDependencies": {
-    "playwright-chromium": "^1.58.0",
+    "@playwright/test": "^1.62.1",
+    "playwright-chromium": "^1.62.1",
     "prettier": "^3.8.1",
     "prettier-plugin-slidev": "^1.0.5"
   },
   "slidev": {
     "defaults": {
       "themeConfig": {
-        "paginationX": "r",
-        "paginationY": "t"
+        "paginationPosition": "top-right"
       }
     }
   }
