@@ -388,24 +388,10 @@
   resolved "https://registry.yarnpkg.com/@hono/node-server/-/node-server-1.19.17.tgz#99bd8625cdbae82652a135c71363cd6322fae483"
   integrity sha512-dSneS5qhiauZWGDCeK4o695Xd9nUNjviSZCMQrj10eetr8Uln1ucn6bbphOM6UynAMMtNIzZNSpL9vnASJwrPQ==
 
-"@iconify-json/carbon@^1.2.18":
-  version "1.2.18"
-  resolved "https://registry.npmjs.org/@iconify-json/carbon/-/carbon-1.2.18.tgz"
-  integrity sha512-Grb13E6r/RqTEV4Sqd/BQR2FUt57U2WLuticJ5H8JbTdHLop1LmdePu3EJJA3Xi8DcWRbD6OnC133hKfOwlgtg==
-  dependencies:
-    "@iconify/types" "*"
-
 "@iconify-json/carbon@^1.2.25":
   version "1.2.25"
   resolved "https://registry.yarnpkg.com/@iconify-json/carbon/-/carbon-1.2.25.tgz#18988fa435c8068eb4d7da76fc50ff2d90538609"
   integrity sha512-7GLgXnmi47Skh8DcPPiP8U3vgm3rOVziEe+flCdG/kwiVaeb649U3Eqt/ej4f3NvlZK8BrOxpR3xQlWFLZYblQ==
-  dependencies:
-    "@iconify/types" "*"
-
-"@iconify-json/devicon@^1.2.59":
-  version "1.2.62"
-  resolved "https://registry.yarnpkg.com/@iconify-json/devicon/-/devicon-1.2.62.tgz#8cd2b5acc6651fe62fbb2efde88c84465222823f"
-  integrity sha512-X0o0+fOJL2t5JTbDCGLRzrmvf8Pv5q8dr86+fW+F/VJ9qvXTtny6lqGIwjE9AY4VTLm3i8f/N+VtRheSW6OkEg==
   dependencies:
     "@iconify/types" "*"
 
@@ -427,13 +413,6 @@
   version "1.2.10"
   resolved "https://registry.yarnpkg.com/@iconify-json/ri/-/ri-1.2.10.tgz#eef0a8e808e2fac3ec82f593ce9d6dbed742334c"
   integrity sha512-WWMhoncVVM+Xmu9T5fgu2lhYRrKTEWhKk3Com0KiM111EeEsRLiASjpsFKnC/SrB6covhUp95r2mH8tGxhgd5Q==
-  dependencies:
-    "@iconify/types" "*"
-
-"@iconify-json/streamline-logos@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@iconify-json/streamline-logos/-/streamline-logos-1.2.0.tgz#8264a916272573d73770ecaa26397623c96ca28b"
-  integrity sha512-eEMC8BvJTCUiR/xdAjKuJwRGnKV5v9Prp2wgONFLKILq1om/5Pz+EUsFXVqYSVeIAUfguaB2tjy1wM7wJbs0IQ==
   dependencies:
     "@iconify/types" "*"
 
@@ -4588,17 +4567,11 @@ slidev-addon-fancy-arrow@^0.16.0:
     roughjs "^4.6.6"
     vue "^3.5.22"
 
-slidev-theme-alchemmist@^0.1.22:
-  version "0.1.22"
-  resolved "file:../../slidev-theme-alchemmist"
+slidev-theme-alchemmist@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/slidev-theme-alchemmist/-/slidev-theme-alchemmist-0.3.0.tgz#26eec1225f0a4c0f0a47bc9eb3ab89cbefce5959"
+  integrity sha512-l3B9J2sCiCdICzGH/8zMBceM9uLQvLXFgQx4qGs1elEywPZobYSPqCQwluEQPA90KyFZAzuwnvWPiVJugtiQmw==
   dependencies:
-    "@iconify-json/carbon" "^1.2.18"
-    "@iconify-json/devicon" "^1.2.59"
-    "@iconify-json/mdi" "^1.2.3"
-    "@iconify-json/streamline-logos" "^1.2.0"
-    "@iconify-json/tabler" "^1.2.27"
-    "@iconify-json/uil" "^1.2.3"
-    "@iconify-json/vscode-icons" "^1.2.44"
     codemirror-theme-vars "^0.1.2"
     prism-theme-vars "^0.2.5"
 
