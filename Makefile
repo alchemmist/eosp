@@ -14,7 +14,7 @@ sync:
 	bash scripts/sync-eosp.sh
 
 spell:
-	-yarn run cspell "**/*.{md,tex}"
+	-pnpm exec cspell "**/*.{md,tex}"
 
 lint:
 	markdownlint-cli2 . --fix
@@ -29,7 +29,7 @@ build: $(PDFDIR) $(LECTURE_PAGES)
 		base=$$(basename $$s .md); \
 		( \
 		cd slides && \
-		yarn run slidev export \
+		pnpm exec slidev export \
 		--format pdf \
 			--output "../$(PDFDIR)/$$base.pdf" \
 			"$$(basename $$s)" \
@@ -42,7 +42,7 @@ build: $(PDFDIR) $(LECTURE_PAGES)
 		mkdir -p $$outdir; \
 		( \
 		cd slides && \
-		yarn run slidev build \
+		pnpm exec slidev build \
 		--out $$outdir \
 		--base /eosp/lectures/$$outname/ \
 		"$$(basename $$s)" \
