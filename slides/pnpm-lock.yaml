@@ -42,8 +42,8 @@ importers:
         specifier: ^0.2.5
         version: 0.2.5
       slidev-addon-fancy-arrow:
-        specifier: ^0.16.0
-        version: 0.16.1(typescript@6.0.3)
+        specifier: ^0.18.0
+        version: 0.18.0(typescript@6.0.3)
       slidev-theme-alchemmist:
         specifier: ^0.3.2
         version: 0.3.2(@slidev/client@52.19.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@oxc-project/types@0.144.0)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@0.12.5)(vite@8.2.1(@types/node@22.20.1)(jiti@2.7.0)(yaml@2.9.0)))(@vue/compiler-sfc@3.5.41)(cac@7.0.0)(lightningcss@1.33.0)(oxc-parser@0.131.0)(rolldown@1.2.4)(srvx@0.12.5)(vite@8.2.1(@types/node@22.20.1)(jiti@2.7.0)(yaml@2.9.0)))(@slidev/types@52.19.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.41)(cac@7.0.0)(rolldown@1.2.4)(srvx@0.12.5)(typescript@6.0.3)(vite@8.2.1(@types/node@22.20.1)(jiti@2.7.0)(yaml@2.9.0)))(vue@3.5.41(typescript@6.0.3))
@@ -2583,8 +2583,8 @@ packages:
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
 
-  slidev-addon-fancy-arrow@0.16.1:
-    resolution: {integrity: sha512-CNSTHmr3StvV6gGECoNW4wQ0hQVI/rLJqgfaMBGlNRFTN6n9+e9+U9nLkDwkRaAirHSIGrsy6g9dbHBky3N8EQ==}
+  slidev-addon-fancy-arrow@0.18.0:
+    resolution: {integrity: sha512-EMCg+wf5E7j7I3JgHeW2vocjZm7fkht8AZgxIrn+tvO9uR2nt54zDTnrrcFXoz4Om7jtg3KVVxHiLkI6RH5fsA==}
 
   slidev-theme-alchemmist@0.3.2:
     resolution: {integrity: sha512-AivexmYorFg3GuCoVwrbr1rEckAXcljiDm14bcF7rk9xh+H2GQ7GN+eDFopRDrxF9PeiGtQ5GDW4qEQT7O+ikw==}
@@ -6087,7 +6087,7 @@ snapshots:
 
   sisteransi@1.0.5: {}
 
-  slidev-addon-fancy-arrow@0.16.1(typescript@6.0.3):
+  slidev-addon-fancy-arrow@0.18.0(typescript@6.0.3):
     dependencies:
       roughjs: 4.6.6
       vue: 3.5.41(typescript@6.0.3)
