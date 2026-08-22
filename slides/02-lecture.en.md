@@ -11,6 +11,7 @@ drawings:
 duration: 95min
 date: February 12th, 2026
 remoteAssets: false
+pwa: build
 layout: intro
 themeConfig:
   paginationX: r
