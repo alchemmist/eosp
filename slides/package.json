@@ -18,7 +18,7 @@
     "@iconify-json/uil": "^1.2.3",
     "@iconify-json/vscode-icons": "^1.2.44",
     "@iconify/vue": "^5.0.0",
-    "@slidev/cli": "^52.19.1",
+    "@slidev/cli": "^53.0.0",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
     "codemirror-theme-vars": "^0.1.2",
