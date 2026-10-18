@@ -201,7 +201,7 @@ importers:
         version: 0.2.5
       slidev-addon-fancy-arrow:
         specifier: ^0.20.0
-        version: 0.20.1(@slidev/client@52.19.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@oxc-project/types@0.144.0)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@0.12.5)(vite@8.3.1(@types/node@22.20.1)(jiti@2.7.0)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.42)(cac@7.0.0)(lightningcss@1.33.0)(oxc-parser@0.131.0)(rolldown@1.2.4)(srvx@0.12.5)(vite@8.3.1(@types/node@22.20.1)(jiti@2.7.0)(yaml@2.9.1)))(vue@3.5.43(typescript@6.0.3))
+        version: 0.20.2(@slidev/client@52.19.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@oxc-project/types@0.144.0)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@0.12.5)(vite@8.3.1(@types/node@22.20.1)(jiti@2.7.0)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.42)(cac@7.0.0)(lightningcss@1.33.0)(oxc-parser@0.131.0)(rolldown@1.2.4)(srvx@0.12.5)(vite@8.3.1(@types/node@22.20.1)(jiti@2.7.0)(yaml@2.9.1)))(vue-router@4.6.4(vue@3.5.43(typescript@6.0.3)))(vue@3.5.43(typescript@6.0.3))
       slidev-theme-alchemmist:
         specifier: ^0.3.2
         version: 0.3.2(@slidev/client@52.19.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@oxc-project/types@0.144.0)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@0.12.5)(vite@8.3.1(@types/node@22.20.1)(jiti@2.7.0)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.42)(cac@7.0.0)(lightningcss@1.33.0)(oxc-parser@0.131.0)(rolldown@1.2.4)(srvx@0.12.5)(vite@8.3.1(@types/node@22.20.1)(jiti@2.7.0)(yaml@2.9.1)))(@slidev/types@52.19.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.42)(cac@7.0.0)(rolldown@1.2.4)(srvx@0.12.5)(typescript@6.0.3)(vite@8.3.1(@types/node@22.20.1)(jiti@2.7.0)(yaml@2.9.1)))(vue@3.5.43(typescript@6.0.3))
@@ -1510,6 +1510,9 @@ packages:
 
   '@vue/compiler-ssr@3.5.43':
     resolution: {integrity: sha512-GF62orf7KiJX9RqrHNGrYBudsQGD0OhJ5nDs90O8UiDuS40+YMYomiXu6w6EuvtXuRDc3MSNis3EaaSKAVSWpg==}
+
+  '@vue/devtools-api@6.6.4':
+    resolution: {integrity: sha512-sGhTPMuXqZ1rVOk32RylztWkfXTRhuS7vgAKv0zjqk8gbsHkJ7xfFf+jbySxt7tWObEJwyKaHMikV/WGDiQm8g==}
 
   '@vue/devtools-api@8.2.1':
     resolution: {integrity: sha512-6u4vXBlIBAC1wMplIZgpyPn7uh/s4Bf6F5bMzvLv+EdJ0aHs/+4B7Ygv864EStQSjRbsRzTko/kUG1A1IejQ3A==}
@@ -3069,11 +3072,12 @@ packages:
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
 
-  slidev-addon-fancy-arrow@0.20.1:
-    resolution: {integrity: sha512-+zFVelXrn6uZWMb+3QGwqYM2La15+auEOL5WTpoJ+/CfDfbT0MBz+ZrCTRFHumF2C+p4RE+wAHp/04vvbwdnhA==}
+  slidev-addon-fancy-arrow@0.20.2:
+    resolution: {integrity: sha512-xd2kZ95rw7mnryxc3QdnEEpiUqhzYcT/CNH/gKMgA/99H1z3Ps8SlzLmWgQxIo0pprOmTiExCQxzzsQ2AogkLg==}
     peerDependencies:
       '@slidev/client': ^51.0.0 || ^52.0.0
       vue: ^3.5.0
+      vue-router: ^4.5.0
     peerDependenciesMeta:
       '@slidev/client':
         optional: true
@@ -3484,6 +3488,11 @@ packages:
     resolution: {integrity: sha512-7+iqOueLU7uc9NrMfrzbG8hwMqchfVfSzpVlCMeJQe4pyibqyoifDNbKTZvwxZKDvGkB+PdFeKvnGZMoEb8esg==}
     peerDependencies:
       vue: ^3.0.0
+
+  vue-router@4.6.4:
+    resolution: {integrity: sha512-Hz9q5sa33Yhduglwz6g9skT8OBPii+4bFn88w6J+J4MfEo4KRRpmiNG/hHHkdbRFlLBOqxN8y8gf2Fb0MTUgVg==}
+    peerDependencies:
+      vue: ^3.5.0
 
   vue-router@5.3.1:
     resolution: {integrity: sha512-GDBZzgmILxA/kFnkFbJjQZdZ2QQbngnIMMuoUcjhZIfH1RGMaPjPwX5ASnV38qamuA9uhO0RDjSBHTDNG2uXyQ==}
@@ -5233,7 +5242,7 @@ snapshots:
 
   '@vue-macros/common@3.1.4(vue@3.5.43(typescript@6.0.3))':
     dependencies:
-      '@vue/compiler-sfc': 3.5.42
+      '@vue/compiler-sfc': 3.5.43
       ast-kit: 2.2.0
       local-pkg: 1.2.1
       magic-string-ast: 1.0.3
@@ -5329,6 +5338,8 @@ snapshots:
     dependencies:
       '@vue/compiler-dom': 3.5.43
       '@vue/shared': 3.5.43
+
+  '@vue/devtools-api@6.6.4': {}
 
   '@vue/devtools-api@8.2.1':
     dependencies:
@@ -7076,10 +7087,11 @@ snapshots:
 
   sisteransi@1.0.5: {}
 
-  slidev-addon-fancy-arrow@0.20.1(@slidev/client@52.19.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@oxc-project/types@0.144.0)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@0.12.5)(vite@8.3.1(@types/node@22.20.1)(jiti@2.7.0)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.42)(cac@7.0.0)(lightningcss@1.33.0)(oxc-parser@0.131.0)(rolldown@1.2.4)(srvx@0.12.5)(vite@8.3.1(@types/node@22.20.1)(jiti@2.7.0)(yaml@2.9.1)))(vue@3.5.43(typescript@6.0.3)):
+  slidev-addon-fancy-arrow@0.20.2(@slidev/client@52.19.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@oxc-project/types@0.144.0)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@0.12.5)(vite@8.3.1(@types/node@22.20.1)(jiti@2.7.0)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.42)(cac@7.0.0)(lightningcss@1.33.0)(oxc-parser@0.131.0)(rolldown@1.2.4)(srvx@0.12.5)(vite@8.3.1(@types/node@22.20.1)(jiti@2.7.0)(yaml@2.9.1)))(vue-router@4.6.4(vue@3.5.43(typescript@6.0.3)))(vue@3.5.43(typescript@6.0.3)):
     dependencies:
       roughjs: 4.6.6
       vue: 3.5.43(typescript@6.0.3)
+      vue-router: 4.6.4(vue@3.5.43(typescript@6.0.3))
     optionalDependencies:
       '@slidev/client': 52.19.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@oxc-project/types@0.144.0)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@0.12.5)(vite@8.3.1(@types/node@22.20.1)(jiti@2.7.0)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.42)(cac@7.0.0)(lightningcss@1.33.0)(oxc-parser@0.131.0)(rolldown@1.2.4)(srvx@0.12.5)(vite@8.3.1(@types/node@22.20.1)(jiti@2.7.0)(yaml@2.9.1))
 
@@ -7503,6 +7515,11 @@ snapshots:
 
   vue-resize@2.0.0-alpha.1(vue@3.5.43(typescript@6.0.3)):
     dependencies:
+      vue: 3.5.43(typescript@6.0.3)
+
+  vue-router@4.6.4(vue@3.5.43(typescript@6.0.3)):
+    dependencies:
+      '@vue/devtools-api': 6.6.4
       vue: 3.5.43(typescript@6.0.3)
 
   vue-router@5.3.1(@vue/compiler-sfc@3.5.42)(rolldown@1.2.4)(vite@8.3.1(@types/node@22.20.1)(jiti@2.7.0)(yaml@2.9.1))(vue@3.5.43(typescript@6.0.3)):
